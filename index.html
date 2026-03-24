@@ -7,116 +7,127 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Oswald:wght@700&family=Rowdies:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Baseball Colors */
+        /* NEW Colors from Logo */
         :root {
-            --baseball-red: #d11212;
-            --field-grass: #1b4332;
-            --dirt: #6b4423;
+            --logo-lime: #a3e635; /* Tailwind lime-400 */
+            --logo-navy: #1e3a8a; /* Tailwind blue-900 / dark navy */
+            --logo-cream: #f8fafc; /* Very light cream/slate-50 */
         }
         
-        body { background-color: #f4f4f4; font-family: 'Oswald', sans-serif; }
+        body { background-color: var(--logo-cream); font-family: 'Oswald', sans-serif; }
         .jersey-text { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
         
-        /* The "Field" Background Section */
+        /* The "Field" Background Section (New Navy Gradient) */
         .field-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            background: linear-gradient(var(--logo-navy), #111827), 
                         url('https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
-            border-bottom: 10px solid var(--baseball-red);
+            border-bottom: 10px solid var(--logo-lime);
         }
 
-        /* Leather/Glove Texture for Cards */
+        /* Card Styling (Navy with Lime Accent) */
         .glove-card {
             background: #ffffff;
-            border-left: 10px solid var(--baseball-red);
+            border-left: 10px solid var(--logo-lime);
             box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
         }
 
-        .softball-yellow { color: #ccff00; }
-        .bg-red-stitch { background-color: var(--baseball-red); }
+        .softball-yellow { color: #facc15; } /* Yellow-400 */
+        .bg-red-stitch { background-color: var(--logo-lime); }
     </style>
 </head>
-<body class="m-0 p-0">
+<body class="m-0 p-0 stitching-bg">
 
-    <nav class="bg-white p-4 flex justify-between items-center shadow-2xl sticky top-0 z-50">
+    <nav class="bg-white p-4 flex justify-between items-center shadow-2xl sticky top-0 z-50 border-b-4 border-lime-400">
         <div class="flex items-center space-x-2">
-            <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold italic">DD</div>
+            <img src="dannys-logo.png" alt="DD Logo" class="h-12 w-auto">
             <span class="text-3xl jersey-text text-slate-900">Danny's Dugout</span>
         </div>
         <div class="hidden md:block">
-            <a href="tel:7274887476" class="text-red-600 font-bold mr-6 underline">727-488-7476</a>
-            <a href="https://calendar.google.com" target="_blank" class="bg-red-600 text-white px-8 py-3 rounded-full jersey-text hover:bg-red-700 transition">Book Now</a>
+            <a href="tel:7274887476" class="text-slate-700 font-bold mr-6 underline">727-488-7476</a>
+            <a href="https://calendar.google.com" target="_blank" class="bg-slate-900 text-lime-400 px-8 py-3 rounded-full jersey-text hover:bg-slate-800 transition">Book Now</a>
         </div>
     </nav>
 
     <header class="field-section text-white py-32 px-6 text-center relative">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <img src="dannys-logo.png" alt="Danny's Dugout Logo" class="h-40 md:h-56 w-auto mb-10 shadow-2xl rounded-2xl border-4 border-lime-400 bg-white/10 p-2">
+            
             <h1 class="text-7xl md:text-9xl jersey-text mb-0 italic">Softball</h1>
-            <p class="text-3xl md:text-5xl uppercase font-bold text-red-500 -mt-4 mb-6">Adult Slow Pitch Lessons</p>
+            <p class="text-3xl md:text-5xl uppercase font-bold text-lime-400 -mt-4 mb-6">Adult Slow Pitch Lessons</p>
             <div class="h-1 w-32 bg-white mx-auto mb-8"></div>
             <p class="text-2xl md:text-3xl mb-12 tracking-widest italic">Take Your Game to the Next Level!</p>
             
-            <div class="bg-red-600 inline-block px-10 py-2 transform -skew-x-12 shadow-xl">
-                <span class="text-2xl font-black italic uppercase">Weekends Only</span>
+            <div class="bg-white inline-block px-10 py-2 transform -skew-x-12 shadow-xl border-l-4 border-lime-400">
+                <span class="text-2xl font-black italic uppercase text-slate-900">Weekends Only</span>
             </div>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12">
+    <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 relative z-10 -mt-10">
         
-        <div class="glove-card p-10">
+        <div class="glove-card p-10 bg-white rounded-xl shadow-lg">
             <h3 class="text-4xl jersey-text mb-8 text-slate-900 border-b-2 border-slate-100 pb-4">Lesson Rates</h3>
             <div class="space-y-6">
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl">1-Hour Session</span>
-                    <span class="text-4xl font-black text-red-600">$60</span>
+                <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+                    <span class="text-2xl font-medium text-slate-800">1-Hour Session</span>
+                    <span class="text-4xl font-black text-lime-500 bg-slate-900 px-6 py-2 rounded-xl shadow">$60</span>
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-2xl">2-Hour Session</span>
-                    <span class="text-4xl font-black text-red-600">$100</span>
+                    <span class="text-2xl font-medium text-slate-800">2-Hour Session</span>
+                    <span class="text-4xl font-black text-lime-500 bg-slate-900 px-6 py-2 rounded-xl shadow">$100</span>
                 </div>
             </div>
-            <div class="mt-12 p-4 bg-slate-50 border-l-4 border-slate-300 italic">
+            <div class="mt-12 p-4 bg-slate-50 border-l-4 border-slate-300 italic text-slate-700">
                 Ask about our Private and Team BP services!
             </div>
         </div>
 
-        <div class="flex flex-col justify-center space-y-8">
+        <div class="bg-slate-950 p-10 rounded-xl shadow-lg flex flex-col justify-center space-y-8 text-white">
             <div class="flex items-start space-x-4">
-                <div class="text-4xl">🧤</div>
+                <div class="text-4xl text-lime-400">🧤</div>
                 <div>
-                    <h4 class="text-2xl font-bold uppercase">All Skill Levels</h4>
-                    <p class="text-slate-600">From total beginners to advanced league players.</p>
+                    <h4 class="text-2xl font-bold uppercase text-lime-400">All Skill Levels</h4>
+                    <p class="text-slate-300">From total beginners to advanced league players.</p>
                 </div>
             </div>
             <div class="flex items-start space-x-4">
-                <div class="text-4xl">🏏</div>
+                <div class="text-4xl text-lime-400">🏏</div>
                 <div>
-                    <h4 class="text-2xl font-bold uppercase">Proven Methods</h4>
-                    <p class="text-slate-600">Experienced instructors with a focus on real results.</p>
+                    <h4 class="text-2xl font-bold uppercase text-lime-400">Proven Methods</h4>
+                    <p class="text-slate-300">Experienced instructors with a focus on real results.</p>
                 </div>
             </div>
             <div class="flex items-start space-x-4">
-                <div class="text-4xl">⚾</div>
+                <div class="text-4xl text-lime-400">⚾</div>
                 <div>
-                    <h4 class="text-2xl font-bold uppercase">Tailored Goals</h4>
-                    <p class="text-slate-600">Customized drills to fix your swing or your field play.</p>
+                    <h4 class="text-2xl font-bold uppercase text-lime-400">Tailored Goals</h4>
+                    <p class="text-slate-300">Customized drills to fix your swing or your field play.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-20 px-6 text-center border-t-8 border-red-600">
-        <h2 class="text-5xl jersey-text mb-4">Are You Ready?</h2>
-        <p class="text-xl mb-10 text-slate-400">Train Like A Pro Today.</p>
-        
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
-            <a href="tel:7274887476" class="text-4xl font-black hover:text-red-500 transition">(727) 488-7476</a>
-            <a href="mailto:dlieber33@gmail.com" class="text-xl text-slate-400 border-b border-slate-700 pb-1">dlieber33@gmail.com</a>
+    <footer class="bg-slate-950 text-white py-20 px-6 text-center border-t-8 border-lime-400">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <img src="dannys-logo.png" alt="DD Footer Logo" class="h-24 w-auto mb-10 opacity-60">
+            
+            <h2 class="text-5xl jersey-text mb-4 text-white">Are You Ready?</h2>
+            <p class="text-xl mb-10 text-slate-400">Train Like A Pro Today.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 w-full max-w-lg">
+                <a href="tel:7274887476" class="block bg-white text-slate-900 w-full p-6 rounded-xl text-5xl jersey-text font-black tracking-tight hover:scale-105 transition-transform shadow-lg border-l-8 border-lime-400">
+                    (727) 488-7476
+                </a>
+            </div>
+            
+            <div class="border-t border-slate-800 w-full pt-10">
+                <a href="mailto:dlieber33@gmail.com" class="text-xl text-lime-400 border-b border-lime-400/30 pb-1">dlieber33@gmail.com</a>
+            </div>
+            
+            <p class="text-xs text-slate-600 uppercase tracking-widest mt-16">© 2026 Danny's Dugout | Tampa, FL</p>
         </div>
-        
-        <p class="text-xs text-slate-600 uppercase tracking-widest mt-10">© 2026 Danny's Dugout | Tampa, FL</p>
     </footer>
 
 </body>
