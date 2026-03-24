@@ -3,84 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danny's Dugout | Adult Softball Lessons</title>
+    <title>Danny's Dugout | Slow Pitch Softball Lessons for Adults</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --logo-lime: #a3e635; --logo-navy: #0f172a; }
-        body { background-color: #fdfbf7; font-family: 'Oswald', sans-serif; }
-        .jersey-font { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
-        .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1593341646782-e0b495cff86d?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
+        .dugout-navy { background-color: #0d1117; } /* Ultra-dark navy for high contrast */
+        .dugout-lime { background-color: #76ff03; } /* Neon Lime from logo */
+        .dugout-lime-text { color: #76ff03; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="bg-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50 border-b-4 border-lime-400">
-        <div class="flex items-center space-x-3">
-            <img src="logo.jpg" alt="Logo" class="h-10 w-auto rounded">
-            <span class="text-2xl jersey-font text-slate-900">Danny's Dugout</span>
+    <nav class="p-4 flex justify-between items-center bg-white shadow-lg sticky top-0 z-50 border-b-2 border-slate-100">
+        <div class="flex items-center space-x-2">
+            <img src="logo.png" alt="DD Logo" class="h-10 w-auto">
+            <span class="text-2xl font-extrabold text-slate-900 tracking-tighter">Danny's Dugout</span>
         </div>
-        <a href="#contact" class="bg-slate-900 text-lime-400 px-6 py-2 rounded-full jersey-font hover:bg-lime-400 hover:text-slate-900 transition">Contact Now</a>
+        <div class="space-x-2">
+             <a href="tel:7274887476" class="bg-slate-900 text-white px-5 py-2 rounded-full font-bold hover:opacity-90 transition">Call/Text Now</a>
+             <a href="https://calendar.google.com" target="_blank" class="dugout-lime text-slate-950 px-5 py-2 rounded-full font-bold hover:opacity-90 transition">Book Online</a>
+        </div>
     </nav>
 
-    <header class="hero-bg text-white py-20 px-6 text-center border-b-8 border-lime-400">
-        <img src="logo.jpg" alt="Logo" class="h-40 w-auto mx-auto mb-6 rounded-3xl border-4 border-lime-400 bg-white p-1 shadow-2xl">
-        <h1 class="text-6xl md:text-8xl jersey-font italic leading-none">Softball</h1>
-        <p class="text-2xl md:text-4xl uppercase font-bold text-lime-400 mb-10">Adult Slow Pitch Lessons</p>
+    <header class="dugout-navy text-white py-16 px-6 text-center shadow-inner relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMCAwaDEwdjEwSDBWMHptMTAgMTBoMTB2MTBIMTBWMTB6TTIwIDBoMTB2MTBIMjBWMHptMTAgMTBoMTB2MTBIMzBWMTB6TTAgMjBoMTB2MTBIMFYyMHptMTAgMTBoMTB2MTBIMTBWMzB6TTIwIDIwaDEwdjEwSDIwVjIwek0zMCAzMGgxMHYxMEgzMFYzMHoiLz48L2c+PC9nPjwvc3ZnPg==');"></div>
         
-        <a href="https://calendar.google.com/calendar/u/0/r?preset=1" target="_blank" class="inline-block bg-white text-slate-900 px-10 py-4 font-black text-xl jersey-font rounded-xl shadow-xl hover:scale-105 transition">
-            📅 VIEW CALENDAR
-        </a>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-6xl md:text-8xl font-black dugout-lime-text mb-1 tracking-tighter uppercase italic">
+                Softball
+            </h1>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Adult Slow Pitch Lessons</h2>
+            
+            <p class="text-2xl font-bold text-white mb-6 italic tracking-tight">
+                Take Your Game to the Next Level!
+            </p>
+            
+            <div class="bg-slate-800 inline-block text-white font-bold px-8 py-3 rounded-md text-xl uppercase tracking-wider mb-10 shadow-md">
+                Tampa, Florida
+            </div>
+        </div>
     </header>
 
-    <section id="contact" class="max-w-3xl mx-auto py-16 px-6">
-        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-slate-100">
-            <h2 class="text-5xl jersey-font mb-2 text-slate-900 text-center uppercase">Contact Me Now</h2>
-            <p class="text-center text-slate-500 mb-10 italic">Your request will be sent to our team.</p>
+    <section class="max-w-6xl mx-auto py-20 px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
             
-            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="space-y-6">
-                <div>
-                    <label class="block uppercase text-xs font-bold mb-2">Name</label>
-                    <input name="name" type="text" required class="w-full bg-slate-50 border border-slate-200 rounded py-3 px-4 focus:border-lime-500 outline-none">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-black mb-6 uppercase text-center text-slate-950">Lesson Rates</h3>
+                
+                <div class="dugout-navy p-10 rounded-2xl shadow-2xl flex justify-between items-center border-l-8 dugout-lime transform hover:scale-105 transition-transform">
+                    <h4 class="text-3xl font-bold text-white">1-Hour Session</h4>
+                    <span class="text-6xl font-black dugout-lime-text">$60</span>
                 </div>
-                <div>
-                    <label class="block uppercase text-xs font-bold mb-2">Email</label>
-                    <input name="email" type="email" required class="w-full bg-slate-50 border border-slate-200 rounded py-3 px-4 focus:border-lime-500 outline-none">
+
+                <div class="dugout-navy p-10 rounded-2xl shadow-2xl flex justify-between items-center border-l-8 dugout-lime transform hover:scale-105 transition-transform">
+                    <h4 class="text-3xl font-bold text-white">2-Hour Session</h4>
+                    <span class="text-6xl font-black dugout-lime-text">$100</span>
                 </div>
-                <div>
-                    <label class="block uppercase text-xs font-bold mb-2">Service Needed</label>
-                    <select name="service" class="w-full bg-slate-50 border border-slate-200 rounded py-3 px-4 outline-none">
-                        <option>1-Hour Lesson ($60)</option>
-                        <option>2-Hour Lesson ($100)</option>
-                        <option>Team BP Services</option>
-                        <option>General Inquiry</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block uppercase text-xs font-bold mb-2">Message</label>
-                    <textarea name="message" rows="4" placeholder="Tell us about your goals..." class="w-full bg-slate-50 border border-slate-200 rounded py-3 px-4 focus:border-lime-500 outline-none"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-slate-900 text-lime-400 text-3xl jersey-font py-4 rounded-xl hover:bg-lime-400 hover:text-slate-900 transition shadow-lg">
-                    Send Request
-                </button>
-            </form>
+                
+                <p class="text-center font-bold text-slate-400 mt-6 uppercase tracking-widest dugout-lime-text p-3 dugout-navy rounded-md inline-block">WEEKENDS ONLY</p>
+            </div>
+            
+            <div class="bg-white p-10 rounded-2xl shadow-2xl space-y-8 border-t-8 border-slate-900">
+                <h3 class="text-3xl font-black text-slate-950 uppercase mb-4 text-center">Our Services</h3>
+                
+                <ul class="space-y-5 list-none text-slate-700 font-medium text-lg">
+                    <li class="flex items-start space-x-3">
+                        <span class="text-dugout-lime-text text-3xl font-black leading-none bg-slate-950 p-2 rounded-full">✓</span>
+                        <span>Lessons for all skill levels: **Beginner & Advanced!**</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-dugout-lime-text text-3xl font-black leading-none bg-slate-950 p-2 rounded-full">✓</span>
+                        <span>Experienced instructors using **Proven Methods** for real results!</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-dugout-lime-text text-3xl font-black leading-none bg-slate-950 p-2 rounded-full">✓</span>
+                        <span>**Private and/or Team BP services** available.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <span class="text-dugout-lime-text text-3xl font-black leading-none bg-slate-950 p-2 rounded-full">✓</span>
+                        <span>Options tailored to meet **your goals**.</span>
+                    </li>
+                </ul>
+            </div>
+            
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-slate-500 py-12 text-center">
-        <div class="mb-6">
-            <p class="text-sm uppercase tracking-widest italic text-lime-400 mb-2">Tampa, FL</p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6">
-                <a href="mailto:jbiheartradio@gmail.com" class="hover:text-white transition">jbiheartradio@gmail.com</a>
-                <a href="mailto:dlieber33@gmail.com" class="hover:text-white transition">dlieber33@gmail.com</a>
-            </div>
+    <footer class="dugout-navy text-white py-16 text-center px-6">
+        <h3 class="text-4xl font-extrabold mb-2 dugout-lime-text">Ask About Our Specialty Services!</h3>
+        <p class="text-sm text-slate-300 mb-8 uppercase font-bold tracking-wider">Reach out today to discuss custom plans.</p>
+        
+        <div class="max-w-xl mx-auto space-y-4">
+            <a href="tel:7274887476" class="block bg-slate-800 p-6 rounded-xl text-4xl dugout-lime-text font-black tracking-tight hover:scale-105 transition-transform shadow-lg">
+                (727) 488-7476
+            </a>
+            <p class="text-xl text-slate-100 italic">Call or Text Now</p>
         </div>
-        <p class="text-xs">© 2026 Danny's Dugout</p>
+        
+        <div class="mt-16 text-xs text-slate-400 font-bold uppercase tracking-widest border-t border-slate-800 pt-8">
+            © 2026 Danny's Dugout | Slow Pitch Softball Lessons for Adults
+        </div>
     </footer>
 
 </body>
