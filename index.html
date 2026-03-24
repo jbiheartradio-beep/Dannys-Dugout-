@@ -5,88 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danny's Dugout | Slow Pitch Softball Lessons for Adults</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Playfair+Display:ital,wght@1,700&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <style>
-        .dugout-blue { background-color: #1a1e26; } /* Navy/Slate for high contrast */
-        .dugout-sky { background-color: #87ceeb; } /* Sky Blue */
-        .dugout-green { background-color: #76ff03; } /* Neon Green */
-        .dugout-green-text { color: #76ff03; }
-        
-        /* High Contrast "Field" Text Outlining */
-        .text-field-red { color: #cc1e1e; -webkit-text-stroke: 1px rgba(0,0,0,0.4); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .text-field-black { color: #1a1e26; -webkit-text-stroke: 1.5px rgba(255,255,255,0.7); text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
-
-        /* Background Style */
-        .baseball-field-bg {
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIHNsaWNlIj48cmVjdCB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiBmaWxsPSIjOWU5ZTk5Ii8+PHJlY3Qgd2lkdGg9IjE5MjAiIGhlaW6odD0iNDAiIHk9IjI0MCIgZmlsbD0iI2YwZjBmMCIvPjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDgwIiB4PSI0MDAiIGZpbGw9IiNmMGYwZjAiLz48ZyBmaWxsPSIjYTMwMDAwIj48cGF0aCBkPSJNOTYwIDEwODBMMTAzMCAxMDgwTDkzMCAxMDgwTDk2MCAxMDgwSjk2MCIvPjwvZz48cGF0aCBkPSJNOTYwIDEwODBMMTAzMCAxMDgwTDkzMCAxMDgwTDk2MCAxMDgwSjk2MCIvPjwvc3ZnPg==');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        :root {
+            --baseball-red: #b91c1c; /* Tailwind red-700 */
+            --dugout-blue: #111827; /* Tailwind gray-900 */
+            --field-tan: #f5e9d3;
+            --softball-green: #ccff00;
         }
-    </style>
-</head>
-<body class="bg-slate-100 text-slate-900 font-sans">
 
-    <nav class="p-4 flex justify-between items-center bg-white shadow-md sticky top-0 z-50">
-        <div class="flex items-center space-x-2">
-            <span class="text-2xl font-black dugout-green-text tracking-tighter" style="font-family: 'Comic Sans MS', cursive;">Danny's Dugout</span>
-        </div>
-        <div class="space-x-2 flex">
-             <a href="tel:7274887476" class="bg-slate-800 text-white px-5 py-2 rounded-md font-bold hover:opacity-90 transition">Call/Text Now</a>
-             <a href="https://calendar.google.com" target="_blank" class="dugout-green text-slate-900 px-5 py-2 rounded-md font-bold hover:opacity-90 transition">Book Online</a>
-        </div>
-    </nav>
+        /* Specialized Baseball Fonts */
+        .jersey-font { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; }
+        .cursive-font { font-family: 'Playfair Display', serif; font-style: italic; }
+        .label-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
 
-    <header class="dugout-sky text-white py-16 px-6 text-center shadow-inner relative overflow-hidden">
-        <div class="absolute inset-0 opacity-30" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMCAwaDEwdjEwSDBWMHptMTAgMTBoMTB2MTBIMTBWMTB6TTIwIDBoMTB2MTBIMjBWMHptMTAgMTBoMTB2MTBIMzBWMTB6TTAgMjBoMTB2MTBIMFYyMHptMTAgMTBoMTB2MTBIMTBWMzB6TTIwIDIwaDEwdjEwSDIwVjIwek0zMCAzMGgxMHYxMEgzMFYzMHoiLz48L2c+PC9nPjwvc3ZnPg==');"></div>
-        
-        <div class="max-w-4xl mx-auto relative z-10">
-            <h1 class="text-5xl md:text-7xl font-black text-field-black mb-1 tracking-tighter uppercase italic">
-                Softball
-            </h1>
-            <h2 class="text-3xl md:text-5xl font-extrabold dugout-blue-text mb-4">Adult Slow Pitch Lessons</h2>
-            
-            <p class="text-3xl font-black text-field-red mb-6 italic tracking-tight">
-                Take Your Game to the Next Level!
-            </p>
-            
-            <div class="bg-slate-950 inline-block text-white font-bold px-8 py-3 rounded-md text-xl uppercase tracking-wider mb-10 shadow-lg">
-                Weekends Only
-            </div>
-        </div>
-    </header>
+        /* Baseball Red Accents & Effects */
+        .bg-baseball-red { background-color: var(--baseball-red); }
+        .text-baseball-red { color: var(--baseball-red); }
+        .softball-green-text { color: var(--softball-green); }
 
-    <section class="baseball-field-bg py-24 px-6 border-y-8 border-white">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            
-            <div class="bg-white/95 p-10 rounded-2xl shadow-2xl border-t-8 dugout-green backdrop-blur-sm">
-                <h3 class="text-3xl font-black mb-8 uppercase text-center text-slate-950">Lesson Rates</h3>
-                
-                <div class="grid grid-cols-2 gap-6 text-center mb-10">
-                    <div class="bg-slate-950 p-6 rounded-xl text-white shadow-md">
-                        <p class="text-sm font-bold opacity-80 uppercase">1-Hour</p>
-                        <p class="text-4xl font-black dugout-green-text">$60</p>
-                    </div>
-                    <div class="bg-slate-950 p-6 rounded-xl text-white shadow-md">
-                        <p class="text-sm font-bold opacity-80 uppercase">2-Hour</p>
-                        <p class="text-4xl font-black dugout-green-text">$100</p>
-                    </div>
-                </div>
-                
-                <ul class="space-y-4 text-slate-700 font-medium list-none text-lg">
-                    <li class="flex items-center space-x-3">
-                        <span class="text-4xl">🥎</span>
-                        <span>Lessons for all skill levels: Beginner & Advanced!</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span class="text-4xl">🥎</span>
-                        <span>Private and/or Team BP services available.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span class="text-4xl">🥎</span>
-                        <span>Options tailored to meet your individual or team goals.</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="text-center">
-                <div
+        /* Red "Stitching" Pattern */
+        .stitching-bg {
+            background-color: #fdfdfd;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/1999/svg'%3P%3Cg fill='%23b91c1c' fill-opacity='0.1'%3P%3Cpath d='M0 0h1v1H0V0zm1 1h1v1H1V1zm1 1h1v1H2V2zm1 1h1v1H3V3zm1 1h1v1H4V4zm1 1h1v1H5V5zm1 1h1v1H6V6zm1 1h1v1H7V7zm1 1h1v1H8V8zm1 1h1v1H9V9zm1 1h1v1H10V10zm1 1h1v1H11V11zm1 1h1v1H12V12zm1 1h1v1H13V13zm1 1h1v1H14V14zm1 1h1v1H15V15zm1 1h1v1H16V16zm1 1h1v1H17V17zm1 1h1v1H18V18zm1 1h1v1H19V19zm1 1h1v1H20V20z'/%3P%3C/g%3P%3C/svg%3P");
+        }
+
+        /* Cross-Bats SVG Divider */
+        .bats-divider {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            color: white;
+            opacity: 0.8;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/1999/svg' viewBox='0 0 100 100' fill='white'%3P%3Cpath d='M83.6 16.4C80.3 13.1 76.1 11.2 71.3 11.2C66.5 11.2 62.3 13.1 59 16.4L16.4 59C13.1 62.3 11.2 66.5 11.2 71.3C11.2 76.1 13.1 80.3 16.4 83.6L22.6 77.4L18.4 73.2L31 60.6L35.2 64.8L29 71L21 63C19.7 61.7 19.7 59.6 21 58.3L63.6 15.7C64.9 14.4 67 14.4 68.3 15.7C69.6 17 69.6 19.1 68.3 20.4L25.7 63C24.4 64.3 24.4 66.4 25.7 67.7C27 69 29.1 69 30.4 67.7L73 25.1C74.3 23.8 76.4 23.8 77.7 25.1C79 26.4 79 28.5 77.7 29.8L35.1 72.4C33.8 73.7 33.8 75.8 35.1 77.1C36.4 78.4 38.5 78.4 39.8 77.1L82.4 34.5C83.7 33.2 85.8 33.2 87.1 34.5C88.4 35.8 88.4 37.9 87.1 39.2L44.5 81.8C43.2 83.1 41.1 83.1 39.8 81.8C38.5 80.5 38.5 78.4 39.8 77.1L82.4 34.5C83.7 33.2 85.8 33.2 87.1 34.5C88.4 35.8 88.4 37.9 87.1 39.2L44.5 81.8C43.2 83.1 41.1 83.1 39.8 81.8C38.5 80.5 38.5 78.4 39.8 77.1L82.4 34.5L83.6 16.4Z'%3P%3C/path%3P%3C/svg%3P");
+            background-size: contain;
+            background-repeat:
