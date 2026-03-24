@@ -103,13 +103,16 @@
                     <input name="name" type="text" placeholder="Your Name" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
                     <input name="email" type="email" placeholder="Your Email" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
                 </div>
-                <select name="service" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
-                    <option>1-Hour Lesson ($60)</option>
-                    <option>2-Hour Lesson ($100)</option>
-                    <option>Team BP Services</option>
-                    <option>General Inquiry</option>
-                </select>
-                <textarea name="message" rows="4" placeholder="Tell us about your goals..." class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition"></textarea>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input name="phone" type="tel" placeholder="Cell Phone Number" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
+                    <select name="service" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
+                        <option>1-Hour Lesson ($60)</option>
+                        <option>2-Hour Lesson ($100)</option>
+                        <option>Team BP Services</option>
+                        <option>General Inquiry</option>
+                    </select>
+                </div>
+                <textarea name="message" rows="4" placeholder="Tell us about your goals (position, hitting, etc.)..." class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition"></textarea>
                 <button type="submit" class="w-full bg-slate-900 text-lime-400 text-3xl jersey-font py-4 rounded-xl hover:bg-lime-400 hover:text-slate-900 transition shadow-lg transform active:scale-95">
                     Submit Request
                 </button>
