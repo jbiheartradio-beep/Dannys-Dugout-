@@ -3,61 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Boyer | Media Strategy & Advertising</title>
+    <title>Danny's Dugout | Baseball Private Lessons</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .baseball-red { background-color: #d11919; }
+        .baseball-cream { background-color: #fdf5e6; }
+        .text-baseball-red { color: #d11919; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="baseball-cream text-slate-900 font-sans">
 
-    <nav class="p-6 flex justify-between items-center bg-white shadow-md sticky top-0 z-50">
-        <div class="text-xl font-black tracking-tighter text-red-600">JB | MEDIA STRATEGY</div>
-        <div class="space-x-4">
-            <a href="https://calendar.google.com" target="_blank" class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-slate-700 transition">Book a Meeting</a>
+    <nav class="p-4 flex justify-between items-center bg-white shadow-md sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl font-black tracking-tighter text-slate-900">DANNY'S DUGOUT</span>
         </div>
+        <a href="https://calendar.google.com" target="_blank" class="baseball-red text-white px-5 py-2 rounded-md font-bold hover:opacity-90 transition">Book a Lesson</a>
     </nav>
 
-    <header class="hero-gradient text-white py-32 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">Broadcast & Digital <span class="text-red-500">Reach.</span></h1>
-            <p class="text-xl text-slate-300 mb-10 leading-relaxed">
-                Strategic advertising solutions designed for massive scale. From frequency planning to cross-platform digital outreach.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="mailto:jbiheartradio.com" class="bg-red-600 text-white font-bold px-10 py-4 rounded-full hover:bg-red-700 transition shadow-xl text-lg">
-                    Contact Me Now
-                </a>
-            </div>
+    <header class="baseball-red text-white py-20 px-6 text-center shadow-inner">
+        <h1 class="text-5xl md:text-7xl font-black mb-4 uppercase italic tracking-widest">Baseball</h1>
+        <h2 class="text-3xl md:text-5xl font-serif mb-8">Private Lessons</h2>
+        <div class="max-w-xl mx-auto bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20">
+            <p class="text-2xl font-bold mb-4">Are You Ready? Train Like A Pro Today.</p>
+            <a href="mailto:dlieber33@gmail.com" class="inline-block bg-white text-red-600 font-black px-10 py-4 rounded-full hover:bg-slate-100 transition shadow-xl text-lg uppercase">
+                Contact Me Now
+            </a>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto py-24 px-6">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-10 bg-white rounded-3xl shadow-sm border border-slate-200 hover:shadow-lg transition">
-                <div class="w-12 h-12 bg-red-100 rounded-lg mb-6 flex items-center justify-center text-red-600 font-bold">01</div>
-                <h3 class="text-2xl font-bold mb-4">Ad Strategy</h3>
-                <p class="text-slate-500 leading-relaxed">Expert planning for market saturation, focusing on precise reach and frequency metrics.</p>
+    <section class="max-w-4xl mx-auto py-16 px-6">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-red-600">
+                <h3 class="text-2xl font-black mb-6 uppercase text-center">Lesson Rates</h3>
+                <div class="space-y-4 text-center">
+                    <div class="pb-4 border-b border-slate-100">
+                        <span class="text-lg font-bold">30 Minutes</span>
+                        <p class="text-3xl font-black text-red-600">$40</p>
+                    </div>
+                    <div class="pb-4 border-b border-slate-100">
+                        <span class="text-lg font-bold">60 Minutes</span>
+                        <p class="text-3xl font-black text-red-600">$60</p>
+                    </div>
+                    <p class="text-slate-500 italic mt-4">Monthly Plans Available</p>
+                </div>
             </div>
-            <div class="p-10 bg-white rounded-3xl shadow-sm border border-slate-200 hover:shadow-lg transition">
-                <div class="w-12 h-12 bg-red-100 rounded-lg mb-6 flex items-center justify-center text-red-600 font-bold">02</div>
-                <h3 class="text-2xl font-bold mb-4">Lead Generation</h3>
-                <p class="text-slate-500 leading-relaxed">Developing high-conversion digital assets and automated intake systems for seamless growth.</p>
-            </div>
-            <div class="p-10 bg-white rounded-3xl shadow-sm border border-slate-200 hover:shadow-lg transition">
-                <div class="w-12 h-12 bg-red-100 rounded-lg mb-6 flex items-center justify-center text-red-600 font-bold">03</div>
-                <h3 class="text-2xl font-bold mb-4">Market Insight</h3>
-                <p class="text-slate-500 leading-relaxed">Data-driven targeting across key demographics to ensure maximum ROI on every campaign.</p>
+
+            <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-lg flex flex-col justify-center">
+                <h3 class="text-2xl font-black mb-6 uppercase">Get In Touch</h3>
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-slate-400 uppercase text-xs font-bold tracking-widest">Email</p>
+                        <a href="mailto:dlieber33@gmail.com" class="text-xl hover:text-red-400 transition">dlieber33@gmail.com</a>
+                    </div>
+                    <div>
+                        <p class="text-slate-400 uppercase text-xs font-bold tracking-widest">Text or Call</p>
+                        <a href="tel:7274887476" class="text-xl hover:text-red-400 transition">727-488-7476</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-16 text-center">
-        <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
-        <a href="mailto:jbiheartradio.com" class="text-2xl font-light text-slate-400 hover:text-red-500 transition">jbiheartradio.com</a>
-        <div class="mt-12 pt-8 border-t border-slate-800 text-slate-500 text-sm">
-            © 2026 James Boyer. All rights reserved.
-        </div>
+    <footer class="bg-white py-10 text-center border-t border-slate-200">
+        <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">© 2026 Danny's Dugout</p>
     </footer>
 
 </body>
