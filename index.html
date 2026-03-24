@@ -6,14 +6,25 @@
     <title>Danny's Dugout | Slow Pitch Softball Lessons for Adults</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .dugout-blue { background-color: #1e3a8a; } /* Royal Blue */
+        .dugout-blue { background-color: #1a1e26; } /* Navy/Slate for high contrast */
         .dugout-sky { background-color: #87ceeb; } /* Sky Blue */
         .dugout-green { background-color: #76ff03; } /* Neon Green */
         .dugout-green-text { color: #76ff03; }
-        .text-border { -webkit-text-stroke: 1px black; }
+        
+        /* High Contrast "Field" Text Outlining */
+        .text-field-red { color: #cc1e1e; -webkit-text-stroke: 1px rgba(0,0,0,0.4); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .text-field-black { color: #1a1e26; -webkit-text-stroke: 1.5px rgba(255,255,255,0.7); text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+
+        /* Background Style */
+        .baseball-field-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIHNsaWNlIj48cmVjdCB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiBmaWxsPSIjOWU5ZTk5Ii8+PHJlY3Qgd2lkdGg9IjE5MjAiIGhlaW6odD0iNDAiIHk9IjI0MCIgZmlsbD0iI2YwZjBmMCIvPjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDgwIiB4PSI0MDAiIGZpbGw9IiNmMGYwZjAiLz48ZyBmaWxsPSIjYTMwMDAwIj48cGF0aCBkPSJNOTYwIDEwODBMMTAzMCAxMDgwTDkzMCAxMDgwTDk2MCAxMDgwSjk2MCIvPjwvZz48cGF0aCBkPSJNOTYwIDEwODBMMTAzMCAxMDgwTDkzMCAxMDgwTDk2MCAxMDgwSjk2MCIvPjwvc3ZnPg==');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-100 text-slate-900 font-sans">
 
     <nav class="p-4 flex justify-between items-center bg-white shadow-md sticky top-0 z-50">
         <div class="flex items-center space-x-2">
@@ -29,52 +40,53 @@
         <div class="absolute inset-0 opacity-30" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMCAwaDEwdjEwSDBWMHptMTAgMTBoMTB2MTBIMTBWMTB6TTIwIDBoMTB2MTBIMjBWMHptMTAgMTBoMTB2MTBIMzBWMTB6TTAgMjBoMTB2MTBIMFYyMHptMTAgMTBoMTB2MTBIMTBWMzB6TTIwIDIwaDEwdjEwSDIwVjIwek0zMCAzMGgxMHYxMEgzMFYzMHoiLz48L2c+PC9nPjwvc3ZnPg==');"></div>
         
         <div class="max-w-4xl mx-auto relative z-10">
-            <h1 class="text-5xl md:text-7xl font-black mb-1 text-slate-950 tracking-tighter uppercase italic text-border">
+            <h1 class="text-5xl md:text-7xl font-black text-field-black mb-1 tracking-tighter uppercase italic">
                 Softball
             </h1>
             <h2 class="text-3xl md:text-5xl font-extrabold dugout-blue-text mb-4">Adult Slow Pitch Lessons</h2>
             
-            <p class="text-3xl font-black dugout-blue-text mb-6 italic tracking-tight">
+            <p class="text-3xl font-black text-field-red mb-6 italic tracking-tight">
                 Take Your Game to the Next Level!
             </p>
             
-            <div class="bg-slate-950 inline-block text-white font-bold px-8 py-3 rounded-md text-xl uppercase tracking-wider mb-10">
+            <div class="bg-slate-950 inline-block text-white font-bold px-8 py-3 rounded-md text-xl uppercase tracking-wider mb-10 shadow-lg">
                 Weekends Only
             </div>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div class="bg-white p-10 rounded-2xl shadow-xl border-t-8 dugout-green">
-            <h3 class="text-3xl font-black mb-8 uppercase text-center text-slate-950">Lesson Rates</h3>
+    <section class="baseball-field-bg py-24 px-6 border-y-8 border-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             
-            <div class="grid grid-cols-2 gap-6 text-center mb-10">
-                <div class="dugout-blue p-6 rounded-xl text-white shadow-md">
-                    <p class="text-sm font-bold opacity-80 uppercase">1-Hour</p>
-                    <p class="text-4xl font-black dugout-green-text">$60</p>
+            <div class="bg-white/95 p-10 rounded-2xl shadow-2xl border-t-8 dugout-green backdrop-blur-sm">
+                <h3 class="text-3xl font-black mb-8 uppercase text-center text-slate-950">Lesson Rates</h3>
+                
+                <div class="grid grid-cols-2 gap-6 text-center mb-10">
+                    <div class="bg-slate-950 p-6 rounded-xl text-white shadow-md">
+                        <p class="text-sm font-bold opacity-80 uppercase">1-Hour</p>
+                        <p class="text-4xl font-black dugout-green-text">$60</p>
+                    </div>
+                    <div class="bg-slate-950 p-6 rounded-xl text-white shadow-md">
+                        <p class="text-sm font-bold opacity-80 uppercase">2-Hour</p>
+                        <p class="text-4xl font-black dugout-green-text">$100</p>
+                    </div>
                 </div>
-                <div class="dugout-blue p-6 rounded-xl text-white shadow-md">
-                    <p class="text-sm font-bold opacity-80 uppercase">2-Hour</p>
-                    <p class="text-4xl font-black dugout-green-text">$100</p>
-                </div>
+                
+                <ul class="space-y-4 text-slate-700 font-medium list-none text-lg">
+                    <li class="flex items-center space-x-3">
+                        <span class="text-4xl">🥎</span>
+                        <span>Lessons for all skill levels: Beginner & Advanced!</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-4xl">🥎</span>
+                        <span>Private and/or Team BP services available.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-4xl">🥎</span>
+                        <span>Options tailored to meet your individual or team goals.</span>
+                    </li>
+                </ul>
             </div>
             
-            <ul class="space-y-4 text-slate-700 font-medium list-none text-lg">
-                <li class="flex items-center space-x-3">
-                    <span class="text-4xl">🥎</span>
-                    <span>Lessons for all skill levels: Beginner & Advanced!</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <span class="text-4xl">🥎</span>
-                    <span>Private and/or Team BP services available.</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <span class="text-4xl">🥎</span>
-                    <span>Options tailored to meet your individual or team goals.</span>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="text-center">
-            <div class="bg-slate-950 p-6 rounded-3xl inline-block shadow-2xl relative">
-                <p class="text-xl text-white font-bold p-10 bg-slate-800 rounded-xl">[Placeholder for Flyer Image/
+            <div class="text-center">
+                <div
