@@ -3,158 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danny's Dugout | Slow Pitch Softball Lessons for Adults</title>
+    <title>Danny's Dugout | Elite Softball Training</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Playfair+Display:ital,wght@1,700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Oswald:wght@700&family=Rowdies:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* Baseball Colors */
         :root {
-            --baseball-red: #b91c1c; /* Tailwind red-700 */
-            --dugout-blue: #111827; /* Tailwind gray-900 */
-            --field-tan: #f5e9d3;
-            --softball-green: #ccff00;
+            --baseball-red: #d11212;
+            --field-grass: #1b4332;
+            --dirt: #6b4423;
+        }
+        
+        body { background-color: #f4f4f4; font-family: 'Oswald', sans-serif; }
+        .jersey-text { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* The "Field" Background Section */
+        .field-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 10px solid var(--baseball-red);
         }
 
-        /* Specialized Baseball Fonts */
-        .jersey-font { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; }
-        .cursive-font { font-family: 'Playfair Display', serif; font-style: italic; }
-        .label-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
-
-        /* Baseball Red Accents & Effects */
-        .bg-baseball-red { background-color: var(--baseball-red); }
-        .text-baseball-red { color: var(--baseball-red); }
-        .softball-green-text { color: var(--softball-green); }
-
-        /* Red "Stitching" Pattern */
-        .stitching-bg {
-            background-color: #fdfdfd;
-            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/1999/svg'%3P%3Cg fill='%23b91c1c' fill-opacity='0.1'%3P%3Cpath d='M0 0h1v1H0V0zm1 1h1v1H1V1zm1 1h1v1H2V2zm1 1h1v1H3V3zm1 1h1v1H4V4zm1 1h1v1H5V5zm1 1h1v1H6V6zm1 1h1v1H7V7zm1 1h1v1H8V8zm1 1h1v1H9V9zm1 1h1v1H10V10zm1 1h1v1H11V11zm1 1h1v1H12V12zm1 1h1v1H13V13zm1 1h1v1H14V14zm1 1h1v1H15V15zm1 1h1v1H16V16zm1 1h1v1H17V17zm1 1h1v1H18V18zm1 1h1v1H19V19zm1 1h1v1H20V20z'/%3P%3C/g%3P%3C/svg%3P");
+        /* Leather/Glove Texture for Cards */
+        .glove-card {
+            background: #ffffff;
+            border-left: 10px solid var(--baseball-red);
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
         }
 
-        /* Cross-Bats SVG Divider */
-        .bats-divider {
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
-            color: white;
-            opacity: 0.8;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/1999/svg' viewBox='0 0 100 100' fill='white'%3P%3Cpath d='M83.6 16.4C80.3 13.1 76.1 11.2 71.3 11.2C66.5 11.2 62.3 13.1 59 16.4L16.4 59C13.1 62.3 11.2 66.5 11.2 71.3C11.2 76.1 13.1 80.3 16.4 83.6L22.6 77.4L18.4 73.2L31 60.6L35.2 64.8L29 71L21 63C19.7 61.7 19.7 59.6 21 58.3L63.6 15.7C64.9 14.4 67 14.4 68.3 15.7C69.6 17 69.6 19.1 68.3 20.4L25.7 63C24.4 64.3 24.4 66.4 25.7 67.7C27 69 29.1 69 30.4 67.7L73 25.1C74.3 23.8 76.4 23.8 77.7 25.1C79 26.4 79 28.5 77.7 29.8L35.1 72.4C33.8 73.7 33.8 75.8 35.1 77.1C36.4 78.4 38.5 78.4 39.8 77.1L82.4 34.5C83.7 33.2 85.8 33.2 87.1 34.5C88.4 35.8 88.4 37.9 87.1 39.2L44.5 81.8C43.2 83.1 41.1 83.1 39.8 81.8C38.5 80.5 38.5 78.4 39.8 77.1L82.4 34.5C83.7 33.2 85.8 33.2 87.1 34.5C88.4 35.8 88.4 37.9 87.1 39.2L44.5 81.8C43.2 83.1 41.1 83.1 39.8 81.8C38.5 80.5 38.5 78.4 39.8 77.1L82.4 34.5L83.6 16.4Z'%3P%3C/path%3P%3C/svg%3P");
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+        .softball-yellow { color: #ccff00; }
+        .bg-red-stitch { background-color: var(--baseball-red); }
     </style>
 </head>
-<body class="stitching-bg text-gray-900 font-sans">
+<body class="m-0 p-0">
 
-    <nav class="p-5 flex justify-between items-center bg-white shadow-xl sticky top-0 z-50 border-b-4 bg-baseball-red">
-        <div class="flex items-center space-x-3">
-            <span class="text-4xl jersey-font text-white leading-none">Danny's Dugout</span>
-            <span class="text-xs cursive-font text-gray-200 mt-2">Established 2026</span>
+    <nav class="bg-white p-4 flex justify-between items-center shadow-2xl sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold italic">DD</div>
+            <span class="text-3xl jersey-text text-slate-900">Danny's Dugout</span>
         </div>
-        <div class="space-x-3 flex items-center">
-             <a href="tel:7274887476" class="text-white label-font hover:text-gray-200 transition text-sm">Text/Call: (727) 488-7476</a>
-             <a href="https://calendar.google.com" target="_blank" class="bg-white text-baseball-red px-6 py-2 rounded-full jersey-font font-bold hover:bg-gray-100 transition shadow-md">Book a Lesson</a>
+        <div class="hidden md:block">
+            <a href="tel:7274887476" class="text-red-600 font-bold mr-6 underline">727-488-7476</a>
+            <a href="https://calendar.google.com" target="_blank" class="bg-red-600 text-white px-8 py-3 rounded-full jersey-text hover:bg-red-700 transition">Book Now</a>
         </div>
     </nav>
 
-    <header class="bg-gray-950 text-white pt-24 pb-32 px-6 text-center shadow-inner relative overflow-hidden border-b-8 border-white">
-        <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIHNsaWNlIj48cmVjdCB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiBmaWxsPSIjOWU5ZTk5Ii8+PHJlY3Qgd2lkdGg9IjE5MjAiIGhlaW6odD0iNDAiIHk9IjI0MCIgZmlsbD0iI2YwZjBmMCIvPjxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDgwIiBxPSI0MDAiIGZpbGw9IiNmMGYwZjAiLz48ZyBmaWxsPSIjYTMwMDAwIj48cGF0aCBkPSJNOTYwIDEwODBMMTAzMCAxMDgwTDkzMCAxMDgwTDk2MCAxMDgwSjk2MCIvPjwvZz48cGF0aCBkPSJNOTYwIDEwODBMMTAzMCAxMDgwTDkzMCAxMDgwTDk2MCAxMDgwSjk2MCIvPjwvc3ZnPg=='); background-size: cover; background-position: center;"></div>
-        
-        <div class="max-w-4xl mx-auto relative z-10">
-            <h1 class="text-6xl md:text-8xl jersey-font mb-2 leading-none">Softball</h1>
-            <p class="text-2xl md:text-3xl cursive-font mb-6 leading-tight italic">Adult Slow Pitch Lessons</p>
+    <header class="field-section text-white py-32 px-6 text-center relative">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-7xl md:text-9xl jersey-text mb-0 italic">Softball</h1>
+            <p class="text-3xl md:text-5xl uppercase font-bold text-red-500 -mt-4 mb-6">Adult Slow Pitch Lessons</p>
+            <div class="h-1 w-32 bg-white mx-auto mb-8"></div>
+            <p class="text-2xl md:text-3xl mb-12 tracking-widest italic">Take Your Game to the Next Level!</p>
             
-            <p class="text-xl md:text-2xl label-font softball-green-text mb-10 tracking-wide">
-                Take Your Game to the Next Level!
-            </p>
-            
-            <div class="bg-white/10 inline-block text-white font-bold px-12 py-3 rounded-full text-lg jersey-font tracking-wider border border-white/20 shadow-xl mb-10">
-                Weekends Only
+            <div class="bg-red-600 inline-block px-10 py-2 transform -skew-x-12 shadow-xl">
+                <span class="text-2xl font-black italic uppercase">Weekends Only</span>
             </div>
-            
-            <div class="bats-divider"></div>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto py-24 px-6 grid md:grid-cols-2 gap-16 items-start relative z-20 -mt-16">
+    <section class="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12">
         
-        <div class="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 flex flex-col items-center">
-            <div class="w-20 h-20 bg-baseball-red rounded-full mb-8 flex items-center justify-center text-white shadow-xl border-4 border-white">
-                <span class="text-5xl">🥎</span>
-            </div>
-            <h3 class="text-4xl jersey-font mb-10 text-gray-950">Lesson Rates</h3>
-            
-            <div class="grid grid-cols-2 gap-6 text-center w-full mb-10">
-                <div class="bg-gray-100 p-8 rounded-2xl shadow-inner border border-gray-200">
-                    <p class="text-sm label-font text-gray-500 mb-1">1-Hour</p>
-                    <p class="text-5xl jersey-font text-baseball-red">$60</p>
+        <div class="glove-card p-10">
+            <h3 class="text-4xl jersey-text mb-8 text-slate-900 border-b-2 border-slate-100 pb-4">Lesson Rates</h3>
+            <div class="space-y-6">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl">1-Hour Session</span>
+                    <span class="text-4xl font-black text-red-600">$60</span>
                 </div>
-                <div class="bg-gray-100 p-8 rounded-2xl shadow-inner border border-gray-200">
-                    <p class="text-sm label-font text-gray-500 mb-1">2-Hour</p>
-                    <p class="text-5xl jersey-font text-baseball-red">$100</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl">2-Hour Session</span>
+                    <span class="text-4xl font-black text-red-600">$100</span>
                 </div>
             </div>
-            
-            <p class="text-sm label-font text-gray-400 mt-2 uppercase tracking-wider">Prices may vary for group sizes.</p>
+            <div class="mt-12 p-4 bg-slate-50 border-l-4 border-slate-300 italic">
+                Ask about our Private and Team BP services!
+            </div>
         </div>
-        
-        <div class="bg-gray-50/50 p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col justify-center h-full">
-            <div class="mb-10 text-center">
-                <p class="text-6xl cursive-font text-baseball-red mb-2 italic">Professional Coaching.</p>
-                <p class="text-xl cursive-font text-gray-500">Real Results.</p>
+
+        <div class="flex flex-col justify-center space-y-8">
+            <div class="flex items-start space-x-4">
+                <div class="text-4xl">🧤</div>
+                <div>
+                    <h4 class="text-2xl font-bold uppercase">All Skill Levels</h4>
+                    <p class="text-slate-600">From total beginners to advanced league players.</p>
+                </div>
             </div>
-            
-            <ul class="space-y-6 text-lg list-none font-medium text-gray-800">
-                <li class="flex items-center space-x-3">
-                    <span class="text-2xl text-baseball-red">✔</span>
-                    <span class="label-font">Lessons for all skill levels</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <span class="text-2xl text-baseball-red">✔</span>
-                    <span class="label-font">Beginner to Advanced instruction</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <span class="text-2xl text-baseball-red">✔</span>
-                    <span class="label-font">Private and/or Team BP services</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <span class="text-2xl text-baseball-red">✔</span>
-                    <span class="label-font">Options tailored to your goals</span>
-                </li>
-            </ul>
+            <div class="flex items-start space-x-4">
+                <div class="text-4xl">🏏</div>
+                <div>
+                    <h4 class="text-2xl font-bold uppercase">Proven Methods</h4>
+                    <p class="text-slate-600">Experienced instructors with a focus on real results.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <div class="text-4xl">⚾</div>
+                <div>
+                    <h4 class="text-2xl font-bold uppercase">Tailored Goals</h4>
+                    <p class="text-slate-600">Customized drills to fix your swing or your field play.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto py-20 px-6 text-center">
-        <div class="bg-baseball-red p-12 rounded-3xl shadow-2xl relative overflow-hidden">
-             <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/1999/svg'%3P%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3P%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3P%3C/g%3P%3C/svg%3P');"></div>
-             
-             <h3 class="text-4xl jersey-font text-white mb-4">Ask About Our Specialty Services!</h3>
-             <p class="text-lg cursive-font text-gray-100 mb-10 italic">Reach out today to discuss custom plans.</p>
-             
-             <div class="space-y-4">
-                 <a href="tel:7274887476" class="block bg-white text-baseball-red p-6 rounded-xl text-5xl jersey-font font-black tracking-tight hover:scale-105 transition-transform shadow-lg">
-                     (727) 488-7476
-                 </a>
-                 <p class="text-sm label-font text-gray-200 mt-2">Call or Text Now</p>
-             </div>
+    <footer class="bg-slate-900 text-white py-20 px-6 text-center border-t-8 border-red-600">
+        <h2 class="text-5xl jersey-text mb-4">Are You Ready?</h2>
+        <p class="text-xl mb-10 text-slate-400">Train Like A Pro Today.</p>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+            <a href="tel:7274887476" class="text-4xl font-black hover:text-red-500 transition">(727) 488-7476</a>
+            <a href="mailto:dlieber33@gmail.com" class="text-xl text-slate-400 border-b border-slate-700 pb-1">dlieber33@gmail.com</a>
         </div>
-    </section>
-
-    <footer class="bg-gray-950 text-white py-20 text-center px-6 border-t-8 border-baseball-red mt-24">
-        <div class="max-w-lg mx-auto">
-            <div class="flex items-center justify-center space-x-3 mb-6">
-                <span class="text-5xl jersey-font text-white leading-none">Danny's Dugout</span>
-            </div>
-            <p class="text-xs cursive-font text-gray-400 mb-12">© 2026. All rights reserved. Professional Slow Pitch Instruction.</p>
-            <div class="border-t border-gray-800 pt-10">
-                <a href="mailto:dlieber33@gmail.com" class="text-xs label-font text-gray-500 hover:text-white transition tracking-widest">dlieber33@gmail.com</a>
-            </div>
-        </div>
+        
+        <p class="text-xs text-slate-600 uppercase tracking-widest mt-10">© 2026 Danny's Dugout | Tampa, FL</p>
     </footer>
 
 </body>
