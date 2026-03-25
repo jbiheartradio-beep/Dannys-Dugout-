@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danny's Dugout | Adult Softball Lessons</title>
+    <title>Danny's Dugout | Adult Softball Lessons | Tampa & St. Pete</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +14,6 @@
             background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), 
                         url('digital-dugout-solid.png');
             background-size: cover;
-            /* Update: Anchored to the left wall to keep the branding visible on all screens */
             background-position: left center;
             background-repeat: no-repeat;
         }
@@ -25,7 +24,10 @@
     <nav class="bg-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50 border-b-4 border-lime-400">
         <div class="flex items-center space-x-3">
             <img src="logo.jpg" alt="Danny's Dugout Logo" class="h-10 w-auto rounded">
-            <span class="text-2xl jersey-font text-slate-900 leading-none">Danny's Dugout</span>
+            <div class="flex flex-col">
+                <span class="text-2xl jersey-font text-slate-900 leading-none">Danny's Dugout</span>
+                <span class="text-[10px] uppercase text-slate-500 font-bold tracking-widest -mt-1">Tampa • St. Pete</span>
+            </div>
         </div>
         <a href="#contact" class="bg-slate-900 text-lime-400 px-6 py-2 rounded-full jersey-font hover:bg-lime-400 hover:text-slate-900 transition shadow-lg">Contact Now</a>
     </nav>
@@ -33,7 +35,8 @@
     <header class="hero-bg text-white py-24 px-6 text-center border-b-8 border-lime-400">
         <img src="logo.jpg" alt="Danny's Dugout Logo" class="h-48 w-auto mx-auto mb-8 rounded-3xl border-4 border-lime-400 bg-white p-1 shadow-2xl">
         <h1 class="text-6xl md:text-9xl jersey-font italic leading-none">Softball</h1>
-        <p class="text-2xl md:text-4xl uppercase font-bold text-lime-400 mb-10 tracking-tight">Adult Slow Pitch Lessons</p>
+        <p class="text-2xl md:text-4xl uppercase font-bold text-lime-400 mb-2 tracking-tight">Adult Slow Pitch Lessons</p>
+        <p class="text-lg md:text-xl uppercase font-bold text-slate-200 mb-10 tracking-[0.2em]">Serving the Tampa & St. Pete Metro Area</p>
         
         <div class="flex flex-col md:flex-row justify-center gap-4">
             <a href="tel:7274887476" class="bg-lime-400 text-slate-900 px-12 py-5 font-black text-2xl jersey-font rounded-xl shadow-xl hover:scale-105 transition">
@@ -77,19 +80,18 @@
                     <span class="text-3xl jersey-font tracking-widest leading-none">PAY WITH VENMO</span>
                     <span class="text-xs opacity-90 uppercase font-black mt-1 tracking-widest">@danny-lieber</span>
                 </a>
-
                 <div class="bg-black text-white py-6 rounded-2xl flex flex-col items-center shadow-lg border-b-4 border-slate-700">
                     <span class="text-3xl jersey-font tracking-widest leading-none">APPLE PAY</span>
                     <span class="text-xs text-lime-400 uppercase font-black mt-1 tracking-widest">Send to: 727-488-7476</span>
                 </div>
             </div>
-            
-            <div class="mt-8 p-4 bg-slate-50 rounded-xl inline-block border border-slate-200">
-                <p class="text-sm text-slate-600 font-bold italic">
-                    *Please include your **Name** and **Lesson Date** in the payment notes.
-                </p>
-            </div>
         </div>
+    </section>
+
+    <section class="py-12 px-6 text-center bg-slate-50 border-y border-slate-200">
+        <h3 class="jersey-font text-4xl text-slate-900 mb-2">Location</h3>
+        <p class="text-xl font-bold text-slate-600 uppercase tracking-tight">Proudly serving the <span class="text-slate-900 underline decoration-lime-400 decoration-4 underline-offset-4">Tampa and St. Petersburg Metro Area</span></p>
+        <p class="text-xs text-slate-400 mt-2 italic">*Travel outside this area is not available at this time.</p>
     </section>
 
     <section id="contact" class="bg-slate-100 py-20 px-6">
@@ -121,7 +123,7 @@
 
     <footer class="bg-slate-950 text-slate-500 py-16 text-center px-6">
         <img src="logo.jpg" alt="Logo" class="h-16 mx-auto mb-6 opacity-40">
-        <p class="text-sm uppercase tracking-widest italic text-lime-400 mb-4 tracking-tighter font-bold">Tampa, Florida</p>
+        <p class="text-sm uppercase tracking-widest italic text-lime-400 mb-4 tracking-tighter font-bold">Tampa & St. Pete, Florida</p>
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-slate-300 font-bold">
             <a href="mailto:dlieber33@gmail.com" class="hover:text-white transition underline underline-offset-8 italic">dlieber33@gmail.com</a>
         </div>
