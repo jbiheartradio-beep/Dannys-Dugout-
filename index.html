@@ -38,7 +38,7 @@
 </head>
 <body>
 
-    <nav class="bg-white p-4 flex justify-between items-center shadow-md sticky top-0 z-50 border-b-4 border-lime-400">
+    <nav class="bg-white p-4 flex flex-wrap justify-between items-center shadow-md sticky top-0 z-50 border-b-4 border-lime-400">
         <div class="flex items-center space-x-3">
             <img src="logo.jpg" alt="Danny's Dugout Logo" class="h-10 w-auto rounded">
             <div class="flex flex-col">
@@ -46,7 +46,13 @@
                 <span class="text-[10px] uppercase text-slate-500 font-bold tracking-widest -mt-1">Tampa • St. Pete Area</span>
             </div>
         </div>
-        <div class="flex items-center space-x-4 md:space-x-6">
+        
+        <div class="flex items-center space-x-3 md:space-x-6">
+            <div class="text-right mr-2 md:mr-0">
+                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Call or Text</p>
+                <a href="tel:7274887476" class="text-lg md:text-xl font-bold text-slate-900 hover:text-lime-600 transition tracking-tighter">727-488-7476</a>
+            </div>
+
             <a href="fb://facewebmodal/f?href=https://www.facebook.com/SouthTampaBPClub" 
                onclick="window.location.href='https://www.facebook.com/SouthTampaBPClub'; return false;"
                target="_blank" 
@@ -54,11 +60,8 @@
                title="Follow us on Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
             </a>
-            <div class="hidden lg:block text-right">
-                <p class="text-[10px] font-black text-slate-400 uppercase tracking-tighter leading-none">Bilingual Coach</p>
-                <p class="text-xs font-bold text-slate-900 uppercase">English & Español</p>
-            </div>
-            <a href="#contact" class="bg-slate-900 text-lime-400 px-4 md:px-6 py-2 rounded-full jersey-font hover:bg-lime-400 hover:text-slate-900 transition shadow-lg text-sm md:text-base uppercase tracking-widest">Contact</a>
+
+            <a href="#contact" class="hidden sm:block bg-slate-900 text-lime-400 px-6 py-2 rounded-full jersey-font hover:bg-lime-400 hover:text-slate-900 transition shadow-lg uppercase tracking-widest">Contact</a>
         </div>
     </nav>
 
