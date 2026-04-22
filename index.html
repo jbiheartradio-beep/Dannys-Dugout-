@@ -101,7 +101,7 @@
     <section class="max-w-6xl mx-auto pb-16 px-6">
         <h2 class="text-5xl jersey-font mb-4 border-b-4 border-lime-400 inline-block text-slate-900 uppercase italic">Coaching Rates</h2>
         <div class="grid md:grid-cols-3 gap-6">
-            <div onclick="selectService('1-Hour Session ($60)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-t-8 border-slate-900 flex flex-col h-full">
+            <div onclick="selectService('1-Hour Lesson/BP ($60)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-t-8 border-slate-900 flex flex-col h-full">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-2xl font-bold uppercase leading-tight">1-Hour Session</h3>
                     <span class="text-4xl jersey-font text-lime-600 ml-2">$60</span>
@@ -113,7 +113,7 @@
                 </ul>
                 <div class="bg-slate-100 text-center py-2 rounded-lg text-xs font-bold uppercase text-slate-500 tracking-widest">Tap to Select</div>
             </div>
-            <div onclick="selectService('2-Hour Session ($100)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-t-8 border-slate-900 flex flex-col h-full">
+            <div onclick="selectService('2-Hour Lesson/BP ($100)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-t-8 border-slate-900 flex flex-col h-full">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="text-2xl font-bold uppercase leading-tight">2-Hour Session</h3>
                     <span class="text-4xl jersey-font text-lime-600 ml-2">$100</span>
@@ -218,10 +218,10 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <input name="phone" type="tel" placeholder="Cell Phone" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
                     <select id="service-dropdown" name="service" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition font-bold uppercase text-sm text-slate-700">
-                        <option>Dugout Deal ($150)</option>
-                        <option>1-Hour Lesson/BP ($60)</option>
-                        <option>2-Hour Lesson/BP ($100)</option>
-                        <option>General Question / Pregunta</option>
+                        <option value="Dugout Deal ($150)">Dugout Deal ($150)</option>
+                        <option value="1-Hour Lesson/BP ($60)">1-Hour Lesson/BP ($60)</option>
+                        <option value="2-Hour Lesson/BP ($100)">2-Hour Lesson/BP ($100)</option>
+                        <option value="General Question / Pregunta">General Question / Pregunta</option>
                     </select>
                 </div>
                 <textarea name="message" rows="4" placeholder="Tell us about your goals..." class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition"></textarea>
@@ -260,7 +260,10 @@
     <script>
         function selectService(val) {
             const dropdown = document.getElementById('service-dropdown');
+            // This ensures the dropdown matches the value passed in
             dropdown.value = val;
+            
+            // This scrolls the user down to the contact section smoothly
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
