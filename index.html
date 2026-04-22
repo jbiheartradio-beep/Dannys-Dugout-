@@ -28,8 +28,11 @@
         }
         .price-card { cursor: pointer; transition: transform 0.2s; }
         .price-card:hover { transform: scale(1.02); }
+
+        /* FIXED FAQ STYLES - No more upside down text */
         details summary::-webkit-details-marker { display: none; }
-        details[open] summary span { transform: rotate(180deg); }
+        details summary { list-style: none; }
+        details[open] .faq-arrow { transform: rotate(180deg); }
     </style>
 </head>
 <body>
@@ -116,37 +119,39 @@
     <section class="max-w-4xl mx-auto py-16 px-6">
         <h2 class="text-5xl jersey-font mb-8 text-center text-slate-900 uppercase italic">Common Questions</h2>
         <div class="space-y-4">
+            
             <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
-                <summary class="flex justify-between items-center cursor-pointer list-none">
+                <summary class="flex justify-between items-center cursor-pointer">
                     <span class="text-xl font-bold uppercase text-slate-900">Where do the lessons take place?</span>
-                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                    <span class="faq-arrow transition-transform duration-300 text-lime-600 text-xl">▼</span>
                 </summary>
                 <p class="mt-4 text-slate-600 leading-relaxed">We utilize various local parks and fields across <span class="font-bold">Tampa and St. Pete</span>. Once you book, I will coordinate with you to find the most convenient field that is mutually beneficial.</p>
             </details>
 
             <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
-                <summary class="flex justify-between items-center cursor-pointer list-none">
+                <summary class="flex justify-between items-center cursor-pointer">
                     <span class="text-xl font-bold uppercase text-slate-900">Can I bring a teammate?</span>
-                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                    <span class="faq-arrow transition-transform duration-300 text-lime-600 text-xl">▼</span>
                 </summary>
                 <p class="mt-4 text-slate-600 leading-relaxed">**Absolutely.** For advanced players, I highly recommend bringing 1 or 2 teammates for a **Group BP session**. This allows for a higher volume of swings with better recovery time between rounds. For larger groups or full clinics, use the contact form for a custom quote.</p>
             </details>
 
             <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
-                <summary class="flex justify-between items-center cursor-pointer list-none">
+                <summary class="flex justify-between items-center cursor-pointer">
                     <span class="text-xl font-bold uppercase text-slate-900">Do I need to bring my own gear?</span>
-                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                    <span class="faq-arrow transition-transform duration-300 text-lime-600 text-xl">▼</span>
                 </summary>
                 <p class="mt-4 text-slate-600 leading-relaxed">Just bring your **glove** and a hitting mindset. I provide the balls, specialized drills, and extra bats if you don't have your own yet!</p>
             </details>
 
             <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
-                <summary class="flex justify-between items-center cursor-pointer list-none">
+                <summary class="flex justify-between items-center cursor-pointer">
                     <span class="text-xl font-bold uppercase text-slate-900">What if it rains?</span>
-                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                    <span class="faq-arrow transition-transform duration-300 text-lime-600 text-xl">▼</span>
                 </summary>
                 <p class="mt-4 text-slate-600 leading-relaxed">Florida weather happens! If we get rained out, we will simply reschedule your session to the next available weekend at no extra cost.</p>
             </details>
+
         </div>
     </section>
 
@@ -157,7 +162,6 @@
                 <a href="https://venmo.com/u/danny-lieber" target="_blank" class="bg-[#3d95ce] text-white py-4 rounded-xl font-bold text-xl uppercase shadow-md hover:opacity-90">Venmo: @danny-lieber</a>
                 <div class="bg-black text-white py-4 rounded-xl font-bold text-xl uppercase shadow-md">Apple Pay: 727-488-7476</div>
             </div>
-            <p class="mt-6 text-slate-500 italic text-sm">*Include <span class="font-bold uppercase text-slate-700">Name/Lesson</span> in memo.</p>
         </div>
     </section>
 
