@@ -13,12 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danny's Dugout | Adult Softball Lessons | Tampa & St. Pete</title>
     
-    <meta property="og:title" content="Danny's Dugout | Adult Softball Lessons">
-    <meta property="og:description" content="Level up your slow-pitch game in Tampa & St. Pete. Private lessons, BP, and swing analysis.">
-    <meta property="og:url" content="https://dannysdugoutsoftball.com">
-    <meta property="og:image" content="logo.jpg">
-    <meta property="og:type" content="website">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -34,6 +28,8 @@
         }
         .price-card { cursor: pointer; transition: transform 0.2s; }
         .price-card:hover { transform: scale(1.02); }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary span { transform: rotate(180deg); }
     </style>
 </head>
 <body>
@@ -59,46 +55,33 @@
         <h1 class="text-6xl md:text-9xl jersey-font italic leading-none">Softball</h1>
         <p class="text-2xl md:text-4xl uppercase font-bold text-lime-400 mb-2 tracking-tight">Adult Slow Pitch Lessons</p>
         <p class="text-lg md:text-xl uppercase font-bold text-slate-200 mb-10 tracking-[0.2em]">Serving the Tampa & St. Pete Metro Area</p>
-        
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="tel:7274887476" class="bg-lime-400 text-slate-900 px-12 py-5 font-black text-2xl jersey-font rounded-xl shadow-xl hover:scale-105 transition">
-                📞 CALL / TEXT NOW
-            </a>
-        </div>
+        <a href="tel:7274887476" class="bg-lime-400 text-slate-900 px-12 py-5 font-black text-2xl jersey-font rounded-xl shadow-xl hover:scale-105 transition inline-block">📞 CALL / TEXT NOW</a>
     </header>
 
     <section class="max-w-4xl mx-auto py-16 px-6">
-        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border-2 border-slate-100 relative">
-            <div class="absolute -top-6 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 bg-slate-900 text-lime-400 px-6 py-2 rounded-lg jersey-font text-3xl tracking-widest whitespace-nowrap z-10 shadow-lg">
-                Meet the Coach
-            </div>
-            <div class="mt-8 pt-4 md:mt-4 md:pt-0 space-y-6 text-slate-700 text-lg leading-relaxed text-center md:text-left">
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border-2 border-slate-100 relative text-center md:text-left">
+            <div class="absolute -top-6 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 bg-slate-900 text-lime-400 px-6 py-2 rounded-lg jersey-font text-3xl tracking-widest whitespace-nowrap z-10 shadow-lg">Meet the Coach</div>
+            <div class="mt-8 pt-4 md:mt-4 md:pt-0 space-y-6 text-slate-700 text-lg leading-relaxed">
                 <p class="text-2xl jersey-font text-slate-900 mb-2 leading-none">Hi, I'm Danny.</p>
-                <p>
-                    I’m an experienced slowpitch softball player in the <span class="font-bold text-slate-900">Tampa Bay area</span> with a deep background in both playing and coaching. My passion for development started at <span class="text-slate-900 font-bold">Palma Ceia Little League</span>, where I coached baseball and learned the value of helping players build true confidence on the field.
-                </p>
-                <p>
-                    Six years ago, I founded <span class="text-lime-600 font-bold">South Tampa BP Club</span>. What started as a practice group has grown into a thriving community where I’ve helped countless men and women refine their swing. That mission is what led me to create <span class="font-bold text-slate-900">Danny’s Dugout</span>.
-                </p>
+                <p>I’m an experienced slowpitch softball player in the <span class="font-bold text-slate-900">Tampa Bay area</span> with a deep background in coaching. Six years ago, I founded <span class="text-lime-600 font-bold">South Tampa BP Club</span>. That mission is what led me to create <span class="font-bold text-slate-900">Danny’s Dugout</span>.</p>
             </div>
         </div>
     </section>
 
     <section class="max-w-6xl mx-auto pb-16 px-6">
-        <h2 class="text-5xl jersey-font mb-8 border-b-4 border-lime-400 inline-block text-slate-900">Lesson Rates</h2>
-        
+        <h2 class="text-5xl jersey-font mb-8 border-b-4 border-lime-400 inline-block text-slate-900 uppercase italic">Lesson Rates</h2>
         <div class="grid md:grid-cols-3 gap-6">
             <div onclick="selectService('1-Hour Lesson ($60)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-t-8 border-slate-900 flex flex-col h-full">
                 <div class="flex justify-between items-start mb-4">
                     <span class="text-2xl font-bold uppercase leading-tight">1-Hour Lesson</span>
                     <span class="text-4xl jersey-font text-lime-600 ml-2">$60</span>
                 </div>
-                <ul class="text-slate-600 text-sm space-y-2 mb-6 flex-grow">
+                <ul class="text-slate-600 text-sm space-y-2 mb-6 flex-grow italic">
                     <li>• Focus on one skill (hitting, fielding, pitching).</li>
                     <li>• 1-on-1 coaching with assessment.</li>
-                    <li>• Emphasis on fundamentals and mechanics.</li>
+                    <li>• Emphasis on fundamentals.</li>
                 </ul>
-                <div class="bg-slate-100 text-center py-2 rounded-lg text-xs font-bold uppercase text-slate-500">Tap to Select</div>
+                <div class="bg-slate-100 text-center py-2 rounded-lg text-xs font-bold uppercase text-slate-500 tracking-widest">Tap to Select</div>
             </div>
 
             <div onclick="selectService('2-Hour Lesson ($100)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-t-8 border-slate-900 flex flex-col h-full">
@@ -106,125 +89,105 @@
                     <span class="text-2xl font-bold uppercase leading-tight">2-Hour Lesson</span>
                     <span class="text-4xl jersey-font text-lime-600 ml-2">$100</span>
                 </div>
-                <ul class="text-slate-600 text-sm space-y-2 mb-6 flex-grow">
-                    <li>• Comprehensive training covering multiple skills.</li>
-                    <li>• In-depth assessment and adjustments.</li>
+                <ul class="text-slate-600 text-sm space-y-2 mb-6 flex-grow italic">
+                    <li>• Comprehensive training for multiple skills.</li>
+                    <li>• In-depth assessment & adjustments.</li>
                     <li>• Extended reps for consistency.</li>
                 </ul>
-                <div class="bg-slate-100 text-center py-2 rounded-lg text-xs font-bold uppercase text-slate-500">Tap to Select</div>
+                <div class="bg-slate-100 text-center py-2 rounded-lg text-xs font-bold uppercase text-slate-500 tracking-widest">Tap to Select</div>
             </div>
 
-            <div onclick="selectService('Dugout Deal: (4) 1-Hour Lessons ($150)')" class="price-card bg-slate-900 p-6 rounded-2xl shadow-2xl border-t-8 border-lime-400 flex flex-col h-full relative overflow-hidden">
+            <div onclick="selectService('Dugout Deal: (4) 1-Hour Lessons ($150)')" class="price-card bg-slate-900 p-6 rounded-2xl shadow-2xl border-t-8 border-lime-400 flex flex-col h-full relative overflow-hidden text-white">
                 <div class="absolute top-2 right-2 bg-lime-400 text-slate-900 text-[10px] font-black px-2 py-1 uppercase rounded z-10">Best Value</div>
                 <div class="flex justify-between items-start mb-4">
-                    <span class="text-2xl font-bold uppercase text-white leading-tight pr-4">Dugout Deal</span>
+                    <span class="text-2xl font-bold uppercase leading-tight pr-4">Dugout Deal</span>
                     <span class="text-4xl jersey-font text-lime-400 pt-6">$150</span>
                 </div>
-                <ul class="text-slate-300 text-sm space-y-2 mb-6 flex-grow">
-                    <li>• <span class="text-lime-400 font-bold italic">4 Hours for the price of 3.</span></li>
+                <ul class="text-slate-300 text-sm space-y-2 mb-6 flex-grow italic">
+                    <li>• <span class="text-lime-400 font-bold">4 Hours for the price of 3.</span></li>
                     <li>• Use sessions however you want.</li>
-                    <li>• Flexible training and progression.</li>
+                    <li>• Personalized progression.</li>
                 </ul>
-                <div class="bg-lime-400 text-center py-2 rounded-lg text-xs font-bold uppercase text-slate-900">Tap to Select</div>
+                <div class="bg-lime-400 text-center py-2 rounded-lg text-xs font-bold uppercase text-slate-900 tracking-widest">Tap to Select</div>
             </div>
         </div>
-        <p class="text-slate-500 italic text-center mt-8 font-bold tracking-widest uppercase text-sm">WEEKENDS ONLY • BY APPOINTMENT</p>
     </section>
 
-    <section class="max-w-4xl mx-auto pb-16 px-6">
-        <div class="bg-white p-8 rounded-3xl shadow-xl border-2 border-slate-100 text-center">
+    <section class="max-w-4xl mx-auto py-16 px-6">
+        <h2 class="text-5xl jersey-font mb-8 text-center text-slate-900 uppercase italic">Common Questions</h2>
+        <div class="space-y-4">
+            <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                <summary class="flex justify-between items-center cursor-pointer list-none">
+                    <span class="text-xl font-bold uppercase text-slate-900">Where do the lessons take place?</span>
+                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">We utilize various local parks and fields across <span class="font-bold">Tampa and St. Pete</span>. Once you book, I will coordinate with you to find the most convenient field that is mutually beneficial.</p>
+            </details>
+
+            <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                <summary class="flex justify-between items-center cursor-pointer list-none">
+                    <span class="text-xl font-bold uppercase text-slate-900">Can I bring a teammate?</span>
+                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">**Absolutely.** For advanced players, I highly recommend bringing 1 or 2 teammates for a **Group BP session**. This allows for a higher volume of swings with better recovery time between rounds. For larger groups or full clinics, use the contact form for a custom quote.</p>
+            </details>
+
+            <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                <summary class="flex justify-between items-center cursor-pointer list-none">
+                    <span class="text-xl font-bold uppercase text-slate-900">Do I need to bring my own gear?</span>
+                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">Just bring your **glove** and a hitting mindset. I provide the balls, specialized drills, and extra bats if you don't have your own yet!</p>
+            </details>
+
+            <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                <summary class="flex justify-between items-center cursor-pointer list-none">
+                    <span class="text-xl font-bold uppercase text-slate-900">What if it rains?</span>
+                    <span class="transition-transform duration-300 text-lime-600 text-2xl">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">Florida weather happens! If we get rained out, we will simply reschedule your session to the next available weekend at no extra cost.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto pb-16 px-6 text-center">
+        <div class="bg-white p-8 rounded-3xl shadow-xl border-2 border-slate-100">
             <h2 class="text-3xl jersey-font text-slate-900 mb-6 uppercase">Quick Pay Options</h2>
             <div class="grid md:grid-cols-2 gap-4">
-                <a href="https://venmo.com/u/danny-lieber" target="_blank" class="flex items-center justify-center space-x-3 bg-[#3d95ce] text-white py-4 rounded-xl hover:opacity-90 transition shadow-md">
-                    <span class="font-bold text-xl uppercase">Venmo: @danny-lieber</span>
-                </a>
-                <div class="flex items-center justify-center space-x-3 bg-black text-white py-4 rounded-xl shadow-md">
-                    <span class="font-bold text-xl uppercase">Apple Pay: 727-488-7476</span>
-                </div>
+                <a href="https://venmo.com/u/danny-lieber" target="_blank" class="bg-[#3d95ce] text-white py-4 rounded-xl font-bold text-xl uppercase shadow-md hover:opacity-90">Venmo: @danny-lieber</a>
+                <div class="bg-black text-white py-4 rounded-xl font-bold text-xl uppercase shadow-md">Apple Pay: 727-488-7476</div>
             </div>
-            <p class="mt-6 text-slate-500 italic text-sm">
-                *Please include your <span class="font-bold uppercase text-slate-700">Name</span> and <span class="font-bold uppercase text-slate-700">Lesson Choice</span> in the payment memo.
-            </p>
-        </div>
-    </section>
-
-    <section class="max-w-6xl mx-auto py-16 px-6">
-        <h2 class="text-5xl jersey-font mb-12 text-center text-slate-900 uppercase italic">How It Works</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-16 h-16 bg-lime-400 text-slate-900 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-4 jersey-font shadow-lg">1</div>
-                <h3 class="text-2xl jersey-font text-slate-900 mb-2">Book & Coordinate</h3>
-                <p class="text-slate-600">Submit the form below. I'll reach out to find a <span class="font-bold text-slate-900">local field</span> in the Tampa/St. Pete area.</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-16 h-16 bg-lime-400 text-slate-900 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-4 jersey-font shadow-lg">2</div>
-                <h3 class="text-2xl jersey-font text-slate-900 mb-2">Meet at the Diamond</h3>
-                <p class="text-slate-600">Look for the Danny's Dugout gear! We'll start with a quick assessment to identify your goals.</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-16 h-16 bg-lime-400 text-slate-900 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-4 jersey-font shadow-lg">3</div>
-                <h3 class="text-2xl jersey-font text-slate-900 mb-2">Level Up</h3>
-                <p class="text-slate-600">Get high-volume reps and specialized drills. We’ll perform swing analysis for real-time improvements.</p>
-            </div>
+            <p class="mt-6 text-slate-500 italic text-sm">*Include <span class="font-bold uppercase text-slate-700">Name/Lesson</span> in memo.</p>
         </div>
     </section>
 
     <section id="contact" class="bg-slate-100 py-20 px-6">
-        <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-2xl border-t-8 border-lime-400 text-slate-900">
-            <h2 class="text-5xl jersey-font mb-2 text-center uppercase">Contact Me Now</h2>
-            <p class="text-center text-slate-500 mb-10 italic">Take your game to the next level today!</p>
-            
+        <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-2xl border-t-8 border-lime-400">
+            <h2 class="text-5xl jersey-font mb-8 text-center uppercase">Contact Me</h2>
             <form action="https://formspree.io/f/mdapoavd" method="POST" class="space-y-6">
                 <div class="grid md:grid-cols-2 gap-6">
                     <input name="name" type="text" placeholder="Your Name" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
                     <input name="email" type="email" placeholder="Your Email" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <input name="phone" type="tel" placeholder="Cell Phone Number" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
+                    <input name="phone" type="tel" placeholder="Cell Phone" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
                     <select id="service-dropdown" name="service" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition font-bold uppercase text-sm">
                         <option>Dugout Deal: (4) 1-Hour Lessons ($150)</option>
                         <option>1-Hour Lesson ($60)</option>
                         <option>2-Hour Lesson ($100)</option>
-                        <option>Team BP Services</option>
-                        <option>General Inquiry</option>
+                        <option>Advanced Group BP / Team Inquiry</option>
                     </select>
                 </div>
-                <textarea name="message" rows="4" placeholder="Tell us about your goals (position, hitting, etc.)..." class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition"></textarea>
-                <button type="submit" class="w-full bg-slate-900 text-lime-400 text-3xl jersey-font py-4 rounded-xl hover:bg-lime-400 hover:text-slate-900 transition shadow-lg transform active:scale-95">
-                    Submit Request
-                </button>
+                <textarea name="message" rows="4" placeholder="Tell us about your goals..." class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition"></textarea>
+                <button type="submit" class="w-full bg-slate-900 text-lime-400 text-3xl jersey-font py-4 rounded-xl hover:bg-lime-400 hover:text-slate-900 transition shadow-lg transform active:scale-95 uppercase tracking-widest">Submit Request</button>
             </form>
-        </div>
-    </section>
-
-    <section class="bg-slate-900 py-24 px-6">
-        <div class="max-w-6xl mx-auto text-center mb-16">
-            <h2 class="text-5xl md:text-7xl jersey-font italic text-lime-400 mb-4 uppercase">The Hall of Fame</h2>
-            <p class="text-slate-400 uppercase font-bold tracking-widest">Real Results from Real Players</p>
-        </div>
-        
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
-            <div class="bg-slate-800 p-8 rounded-3xl border-b-4 border-lime-400 relative">
-                <p class="text-slate-200 italic leading-relaxed mb-6">"Danny has helped me a lot at my game. He throws amazing batting practice balls. Perfect strikes every time. Great energy!"</p>
-                <p class="font-bold uppercase text-lime-400 tracking-wider">— Stephano Vargas</p>
-            </div>
-            <div class="bg-slate-800 p-8 rounded-3xl border-b-4 border-lime-400 relative">
-                <p class="text-slate-200 italic leading-relaxed mb-6">"Danny taught me stop dropping my back shoulder. Gradually improving. He is one of the most genuine individuals."</p>
-                <p class="font-bold uppercase text-lime-400 tracking-wider">— Edward Hart</p>
-            </div>
-            <div class="bg-slate-800 p-8 rounded-3xl border-b-4 border-lime-400 relative">
-                <p class="text-slate-200 italic leading-relaxed mb-6">"Danny’s coaching is a game-changer. His expertise helps beginners overcome the strikeout slump to become solid contributors."</p>
-                <p class="font-bold uppercase text-lime-400 tracking-wider">— James Boyer</p>
-            </div>
         </div>
     </section>
 
     <footer class="bg-slate-950 text-slate-500 py-16 text-center px-6 border-t border-slate-800">
         <img src="logo.jpg" alt="Logo" class="h-16 mx-auto mb-6 opacity-40">
         <p class="text-sm uppercase tracking-widest italic text-lime-400 mb-4 font-bold">Tampa & St. Pete, Florida</p>
-        <a href="mailto:dlieber33@gmail.com" class="hover:text-white transition underline underline-offset-8 block mb-4">dlieber33@gmail.com</a>
-        <a href="https://www.facebook.com/profile.php?id=100086622105243" target="_blank" class="text-xs uppercase tracking-widest">Follow on Facebook</a>
-        <p class="text-[10px] opacity-30 mt-10 uppercase">© 2026 Danny's Dugout. All Rights Reserved.</p>
+        <p class="text-[10px] opacity-30 mt-10 uppercase tracking-widest">© 2026 Danny's Dugout. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -234,6 +197,5 @@
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-
 </body>
 </html>
