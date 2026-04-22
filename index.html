@@ -18,7 +18,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --logo-lime: #a3e635; --logo-navy: #0f172a; }
+        :root { --logo-lime: #a3e635; --logo-navy: #0f172a; --fb-blue: #1877F2; }
         body { background-color: #fdfbf7; font-family: 'Oswald', sans-serif; scroll-behavior: smooth; }
         .jersey-font { font-family: 'Teko', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
         .hero-bg {
@@ -50,9 +50,9 @@
             <a href="fb://facewebmodal/f?href=https://www.facebook.com/SouthTampaBPClub" 
                onclick="window.location.href='https://www.facebook.com/SouthTampaBPClub'; return false;"
                target="_blank" 
-               class="text-slate-900 hover:text-blue-600 transition" 
+               class="text-[#1877F2] hover:scale-110 transition-transform" 
                title="Follow us on Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
             </a>
             <div class="hidden lg:block text-right">
                 <p class="text-[10px] font-black text-slate-400 uppercase tracking-tighter leading-none">Bilingual Coach</p>
@@ -152,7 +152,7 @@
             <div class="bg-white p-8 rounded-3xl shadow-lg border-l-8 border-lime-400 flex flex-col justify-between">
                 <div>
                     <div class="flex text-lime-500 mb-4">★★★★★</div>
-                    <p class="text-slate-700 text-md leading-relaxed italic mb-6">"Danny has helped me a lot at my game. He throws amazing batting practice balls. Perfect strikes every time so you’re not wasting time. He has great energy and is truly an amazing person who unified a community of softball players."</p>
+                    <p class="text-slate-700 text-md leading-relaxed italic mb-6">"Danny has helped me a lot with my game. He throws amazing batting practice balls. Perfect strikes every time so you’re not wasting time. He has great energy and is truly an amazing person who unified a community of softball players."</p>
                 </div>
                 <p class="text-slate-900 font-bold uppercase tracking-widest border-t pt-4">— Stephano Vargas</p>
             </div>
@@ -164,6 +164,25 @@
                 </div>
                 <p class="text-slate-900 font-bold uppercase tracking-widest border-t pt-4">— Edward Hart</p>
             </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto pb-16 px-6">
+        <div class="space-y-4">
+            <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                <summary class="flex justify-between items-center cursor-pointer">
+                    <span class="text-xl font-bold uppercase text-slate-900">Where do we play?</span>
+                    <span class="faq-arrow transition-transform duration-300 text-lime-600 text-xl">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">We utilize various local parks throughout <span class="font-bold text-slate-900">Tampa, Clearwater, and St. Pete</span>. I will coordinate with you to find a field that is mutually convenient.</p>
+            </details>
+            <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
+                <summary class="flex justify-between items-center cursor-pointer">
+                    <span class="text-xl font-bold uppercase text-slate-900">Can I bring my team?</span>
+                    <span class="faq-arrow transition-transform duration-300 text-lime-600 text-xl">▼</span>
+                </summary>
+                <p class="mt-4 text-slate-600 leading-relaxed">Yes. I offer Group BP sessions at the same hourly rates. It is an excellent way to get high-volume swings and split the cost with your teammates.</p>
+            </details>
         </div>
     </section>
 
