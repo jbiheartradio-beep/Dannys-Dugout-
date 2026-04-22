@@ -6,7 +6,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-N3EZ8XCK07');
     </script>
 
@@ -26,6 +25,9 @@
             background-position: left center;
             background-repeat: no-repeat;
         }
+        /* Added a pointer cursor so people know they can click the price boxes */
+        .price-card { cursor: pointer; transition: transform 0.2s; }
+        .price-card:hover { transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -83,17 +85,17 @@
         <div class="space-y-6">
             <h2 class="text-5xl jersey-font mb-4 border-b-4 border-lime-400 inline-block">Lesson Rates</h2>
             
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-slate-900 flex justify-between items-center">
+            <div onclick="selectService('1-Hour Lesson ($60)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-l-8 border-slate-900 flex justify-between items-center">
                 <span class="text-xl font-bold uppercase tracking-tight">1-Hour Session</span>
                 <span class="text-4xl jersey-font text-lime-600 font-bold">$60</span>
             </div>
             
-            <div class="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-slate-900 flex justify-between items-center">
+            <div onclick="selectService('2-Hour Lesson ($100)')" class="price-card bg-white p-6 rounded-2xl shadow-lg border-l-8 border-slate-900 flex justify-between items-center">
                 <span class="text-xl font-bold uppercase tracking-tight">2-Hour Session</span>
                 <span class="text-4xl jersey-font text-lime-600 font-bold">$100</span>
             </div>
 
-            <div class="bg-slate-900 p-6 rounded-2xl shadow-2xl border-l-8 border-lime-400 flex justify-between items-center relative overflow-hidden">
+            <div onclick="selectService('Starter Pack: (4) 1-Hour Lessons ($150)')" class="price-card bg-slate-900 p-6 rounded-2xl shadow-2xl border-l-8 border-lime-400 flex justify-between items-center relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-lime-400 text-slate-900 text-[10px] font-black px-3 py-1 uppercase tracking-tighter">Best Value</div>
                 <div class="flex flex-col">
                     <span class="text-xl font-bold uppercase tracking-tight text-white">Starter Pack</span>
@@ -135,7 +137,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-6">
                     <input name="phone" type="tel" placeholder="Cell Phone Number" required class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
-                    <select name="service" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
+                    <select id="service-dropdown" name="service" class="w-full bg-slate-50 border border-slate-200 rounded-lg py-3 px-4 outline-none focus:border-lime-500 transition">
                         <option>Starter Pack: (4) 1-Hour Lessons ($150)</option>
                         <option>1-Hour Lesson ($60)</option>
                         <option>2-Hour Lesson ($100)</option>
@@ -191,6 +193,17 @@
         <a href="https://www.facebook.com/profile.php?id=100086622105243" target="_blank" class="text-xs text-slate-500 hover:text-blue-400 transition font-bold tracking-widest uppercase">Follow on Facebook</a>
         <p class="text-xs opacity-30 mt-10 tracking-widest uppercase">© 2026 Danny's Dugout. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function selectService(val) {
+            // Find the dropdown menu
+            const dropdown = document.getElementById('service-dropdown');
+            // Set the value
+            dropdown.value = val;
+            // Scroll smoothly to the contact form
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
