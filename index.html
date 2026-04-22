@@ -25,7 +25,6 @@
             background-position: left center;
             background-repeat: no-repeat;
         }
-        /* Added a pointer cursor so people know they can click the price boxes */
         .price-card { cursor: pointer; transition: transform 0.2s; }
         .price-card:hover { transform: scale(1.02); }
     </style>
@@ -104,23 +103,44 @@
                 <span class="text-4xl jersey-font text-lime-400 font-bold">$150</span>
             </div>
 
-            <p class="text-slate-500 italic text-center p-4 bg-slate-100 rounded-lg font-bold tracking-widest uppercase">WEEKENDS ONLY</p>
+            <p class="text-slate-500 italic text-center p-4 bg-slate-100 rounded-lg font-bold tracking-widest uppercase text-sm">WEEKENDS ONLY • BY APPOINTMENT</p>
         </div>
 
         <div class="bg-slate-900 text-white p-10 rounded-3xl shadow-2xl flex flex-col justify-between">
             <div>
-                <h2 class="text-4xl jersey-font text-lime-400 mb-8 tracking-widest">Our Services</h2>
+                <h2 class="text-4xl jersey-font text-lime-400 mb-8 tracking-widest">Included Services</h2>
                 <ul class="space-y-6 text-lg">
-                    <li class="flex items-start space-x-3"><span class="text-lime-400 font-bold text-2xl">✓</span><span>Lessons for all skill levels!</span></li>
-                    <li class="flex items-start space-x-3"><span class="text-lime-400 font-bold text-2xl">✓</span><span>Experienced instructors.</span></li>
                     <li class="flex items-start space-x-3"><span class="text-lime-400 font-bold text-2xl">✓</span><span>Private and team BP services.</span></li>
-                    <li class="flex items-start space-x-3"><span class="text-lime-400 font-bold text-2xl">✓</span><span>Tailored to your goals.</span></li>
+                    <li class="flex items-start space-x-3"><span class="text-lime-400 font-bold text-2xl">✓</span><span>Slow-motion video swing analysis.</span></li>
+                    <li class="flex items-start space-x-3"><span class="text-lime-400 font-bold text-2xl">✓</span><span>Specialized drills for power & contact.</span></li>
+                    <li class="flex items-start space-x-3"><span class="text-lime-400 font-bold text-2xl">✓</span><span>All balls and equipment provided.</span></li>
                 </ul>
             </div>
             
             <div class="mt-10 p-4 bg-slate-800 rounded-xl border border-slate-700 italic text-sm text-slate-300">
-                <span class="text-lime-400 font-bold uppercase block not-italic mb-1">Coach's Note:</span>
-                “Just bring your glove and a hitting mindset. I provide the balls, the specialized drills, and even the bats if you need them!”
+                <span class="text-lime-400 font-bold uppercase block not-italic mb-1 text-xs tracking-widest">Coach's Note:</span>
+                “Just bring your glove and a hitting mindset. I provide the balls, specialized drills, and even the bats if you need them!”
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-16 px-6">
+        <h2 class="text-5xl jersey-font mb-12 text-center text-slate-900 uppercase italic">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-lime-400 text-slate-900 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-4 jersey-font shadow-lg">1</div>
+                <h3 class="text-2xl jersey-font text-slate-900 mb-2">Book & Coordinate</h3>
+                <p class="text-slate-600">Submit the form below. I'll reach out to find a <span class="font-bold text-slate-900">mutually beneficial local field</span> in the Tampa or St. Pete area that works for both of us.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-lime-400 text-slate-900 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-4 jersey-font shadow-lg">2</div>
+                <h3 class="text-2xl jersey-font text-slate-900 mb-2">Meet at the Diamond</h3>
+                <p class="text-slate-600">Look for the Danny's Dugout gear! We'll start with a quick 10-minute swing assessment to identify your goals.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="w-16 h-16 bg-lime-400 text-slate-900 rounded-full flex items-center justify-center text-3xl font-black mx-auto mb-4 jersey-font shadow-lg">3</div>
+                <h3 class="text-2xl jersey-font text-slate-900 mb-2">Level Up</h3>
+                <p class="text-slate-600">Get high-volume BP and customized drills. We’ll film your swing so you can see the improvements in real-time.</p>
             </div>
         </div>
     </section>
@@ -196,11 +216,8 @@
 
     <script>
         function selectService(val) {
-            // Find the dropdown menu
             const dropdown = document.getElementById('service-dropdown');
-            // Set the value
             dropdown.value = val;
-            // Scroll smoothly to the contact form
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
