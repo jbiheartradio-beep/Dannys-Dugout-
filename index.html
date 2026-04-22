@@ -29,7 +29,6 @@
         .price-card { cursor: pointer; transition: transform 0.2s; }
         .price-card:hover { transform: scale(1.02); }
 
-        /* FAQ Transition Logic */
         details summary::-webkit-details-marker { display: none; }
         details summary { list-style: none; outline: none; }
         details[open] .faq-arrow { transform: rotate(180deg); }
@@ -64,9 +63,18 @@
     <section class="max-w-4xl mx-auto py-16 px-6">
         <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border-2 border-slate-100 relative text-center md:text-left">
             <div class="absolute -top-6 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 bg-slate-900 text-lime-400 px-6 py-2 rounded-lg jersey-font text-3xl tracking-widest whitespace-nowrap z-10 shadow-lg uppercase">Meet the Coach</div>
-            <div class="mt-8 pt-4 md:mt-4 md:pt-0 space-y-6 text-slate-700 text-lg leading-relaxed">
-                <p class="text-2xl jersey-font text-slate-900 mb-2 leading-none">Hi, I'm Danny.</p>
-                <p>I’m an experienced slowpitch softball player in the <span class="font-bold text-slate-900">Tampa Bay area</span> with a deep background in coaching. Six years ago, I founded <span class="text-lime-600 font-bold">South Tampa BP Club</span>. That mission is what led me to create <span class="font-bold text-slate-900">Danny’s Dugout</span>.</p>
+            
+            <div class="mt-8 md:mt-4 flex flex-col md:flex-row items-center gap-8">
+                <div class="space-y-6 text-slate-700 text-lg leading-relaxed">
+                    <p class="text-2xl jersey-font text-slate-900 mb-2 leading-none">Hi, I'm Danny Lieber.</p>
+                    <p>I’m an experienced slowpitch softball player in the <span class="font-bold text-slate-900">Tampa Bay area</span> with a deep background in coaching and player development. My goal is simple: to help adult players of all skill levels improve their swing, sharpen their fielding, and dominate their local leagues.</p>
+                    
+                    <p>Six years ago, I founded the <span class="text-lime-600 font-bold uppercase">South Tampa BP Club</span>—a community built on the love of the game and the grind of getting better. That mission is what led me to create <span class="font-bold text-slate-900 italic">Danny’s Dugout</span>, providing high-level, personalized instruction for the modern slowpitch athlete.</p>
+                    
+                    <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-lime-400 italic text-sm">
+                        "Whether you are looking to hit your first home run or you're an advanced player looking for elite swing metrics, I’ve got the tools and the experience to get you there."
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -132,7 +140,7 @@
                     <span class="text-xl font-bold uppercase text-slate-900">Can I bring a teammate?</span>
                     <span class="faq-arrow transition-transform duration-300 text-lime-600 text-xl">▼</span>
                 </summary>
-                <p class="mt-4 text-slate-600 leading-relaxed">**Absolutely.** For advanced players, I highly recommend bringing 1 or 2 teammates for a **Group BP session**. This allows for more swings with recovery time.</p>
+                <p class="mt-4 text-slate-600 leading-relaxed">**Absolutely.** For advanced players, I highly recommend bringing 1 or 2 teammates for a **Group BP session**. This allows for more swings with recovery time and splits the cost.</p>
             </details>
 
             <details class="group bg-white p-6 rounded-2xl shadow-md border border-slate-100">
