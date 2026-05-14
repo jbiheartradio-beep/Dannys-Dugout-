@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3EZ8XCK07"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -28,11 +29,11 @@
             background-position: center;
         }
         .price-card:hover { transform: scale(1.02); }
-        details[open] .faq-arrow { transform: rotate(180deg); }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav class="bg-white p-4 flex flex-wrap justify-between items-center shadow-md sticky top-0 z-50 border-b-4 border-lime-400">
         <div class="flex items-center space-x-3">
             <img src="logo.jpg" alt="Danny's Dugout Logo" class="h-10 w-auto rounded">
@@ -53,6 +54,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero-bg text-white py-24 px-6 text-center border-b-8 border-lime-400">
         <h1 class="text-7xl md:text-[9rem] jersey-font leading-none mb-2 text-white drop-shadow-2xl">Danny's Dugout</h1>
         <div class="mb-8">
@@ -63,11 +65,12 @@
             <span class="bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 text-sm font-bold uppercase tracking-widest">Tampa Bay Area</span>
             <span class="bg-lime-400 text-slate-900 px-6 py-2 rounded-full text-sm font-black uppercase tracking-widest italic">Hablamos Español</span>
         </div>
-        <a href="tel:7274887476" onclick="gtag('event','click_call');" class="bg-lime-400 text-slate-900 px-12 py-5 font-black text-2xl jersey-font rounded-xl shadow-2xl hover:scale-105 transition inline-block">
-            📞 CALL / TEXT TO BOOK
+        <a href="https://book.dannysdugoutsoftball.com/checkout" class="bg-lime-400 text-slate-900 px-12 py-5 font-black text-2xl jersey-font rounded-xl shadow-2xl hover:scale-105 transition inline-block">
+            🎟️ BOOK & CHECKOUT ONLINE
         </a>
     </header>
 
+    <!-- Trust Bar -->
     <section class="bg-slate-900 py-6 border-b border-slate-800">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 opacity-70">
             <p class="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em]">As Seen On:</p>
@@ -75,6 +78,7 @@
         </div>
     </section>
 
+    <!-- NEWS FEATURE SECTION -->
     <section class="max-w-6xl mx-auto py-20 px-6">
         <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100 flex flex-col md:flex-row">
             <div class="md:w-1/2 relative group">
@@ -102,6 +106,7 @@
         </div>
     </section>
 
+    <!-- Bio Section -->
     <article class="max-w-4xl mx-auto pb-20 px-6">
         <div class="bg-slate-900 p-10 md:p-16 rounded-3xl shadow-xl relative text-white">
             <h2 class="text-4xl jersey-font text-lime-400 mb-6 tracking-widest uppercase italic">Meet Coach Danny</h2>
@@ -112,19 +117,20 @@
         </div>
     </article>
 
+    <!-- Coaching Rates -->
     <section id="rates" class="max-w-6xl mx-auto pb-24 px-6">
         <h2 class="text-5xl jersey-font mb-10 text-slate-900 uppercase italic text-center">Coaching Rates</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div onclick="selectService('1-Hour Lesson/BP ($60)')" class="price-card cursor-pointer bg-white p-8 rounded-3xl shadow-lg border-t-8 border-slate-900 flex flex-col transition duration-300">
+            <a href="https://book.dannysdugoutsoftball.com/checkout" class="price-card bg-white p-8 rounded-3xl shadow-lg border-t-8 border-slate-900 flex flex-col transition duration-300">
                 <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-2xl font-bold uppercase leading-tight">1-Hour<br>Session</h3>
+                    <h3 class="text-2xl font-bold uppercase leading-tight text-slate-900">1-Hour<br>Session</h3>
                     <span class="text-4xl jersey-font text-lime-600">$60</span>
                 </div>
                 <p class="text-slate-600 text-sm flex-grow">1-on-1 Lesson or Shared BP. Perfect for dialing in mechanics or a power assessment.</p>
-                <div class="bg-slate-100 text-center py-3 mt-6 rounded-xl text-[10px] font-black uppercase text-slate-400 tracking-widest">Select Plan</div>
-            </div>
+                <div class="bg-slate-100 text-center py-3 mt-6 rounded-xl text-[10px] font-black uppercase text-slate-400 tracking-widest">Book Now</div>
+            </a>
             
-            <div onclick="selectService('Dugout Deal ($150)')" class="price-card cursor-pointer bg-slate-900 p-8 rounded-3xl shadow-2xl border-t-8 border-lime-400 flex flex-col text-white transition duration-300 scale-105">
+            <a href="https://book.dannysdugoutsoftball.com/checkout" class="price-card bg-slate-900 p-8 rounded-3xl shadow-2xl border-t-8 border-lime-400 flex flex-col text-white transition duration-300 scale-105">
                 <div class="flex justify-between items-start mb-6">
                     <div>
                         <h3 class="text-2xl font-bold uppercase leading-tight">Dugout<br>Deal</h3>
@@ -133,66 +139,46 @@
                     <span class="text-4xl jersey-font text-lime-400">$150</span>
                 </div>
                 <p class="text-slate-300 text-sm flex-grow italic">4 hours of elite training for the price of 3. Use for private lessons or sharing reps with a partner.</p>
-                <div class="bg-lime-400 text-center py-3 mt-6 rounded-xl text-[10px] font-black uppercase text-slate-900 tracking-widest">Select Best Value</div>
-            </div>
+                <div class="bg-lime-400 text-center py-3 mt-6 rounded-xl text-[10px] font-black uppercase text-slate-900 tracking-widest">Get the Deal</div>
+            </a>
 
-            <div onclick="selectService('2-Hour Lesson/BP ($100)')" class="price-card cursor-pointer bg-white p-8 rounded-3xl shadow-lg border-t-8 border-slate-900 flex flex-col transition duration-300">
+            <a href="https://book.dannysdugoutsoftball.com/checkout" class="price-card bg-white p-8 rounded-3xl shadow-lg border-t-8 border-slate-900 flex flex-col transition duration-300">
                 <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-2xl font-bold uppercase leading-tight">2-Hour<br>Session</h3>
+                    <h3 class="text-2xl font-bold uppercase leading-tight text-slate-900">2-Hour<br>Session</h3>
                     <span class="text-4xl jersey-font text-lime-600">$100</span>
                 </div>
                 <p class="text-slate-600 text-sm flex-grow">Great for advanced players splitting reps to stay fresh or for high-volume team practice.</p>
-                <div class="bg-slate-100 text-center py-3 mt-6 rounded-xl text-[10px] font-black uppercase text-slate-400 tracking-widest">Select Plan</div>
-            </div>
+                <div class="bg-slate-100 text-center py-3 mt-6 rounded-xl text-[10px] font-black uppercase text-slate-400 tracking-widest">Book Now</div>
+            </a>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto py-12 px-6">
-        <h2 class="text-4xl jersey-font mb-8 text-slate-900 uppercase italic text-center">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <details class="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-900 uppercase text-sm tracking-widest">
-                    Can I bring a teammate?
-                    <span class="faq-arrow transition-transform">▼</span>
-                </summary>
-                <p class="mt-4 text-slate-600 text-md leading-relaxed">Yes! You can split any session with a teammate. Sharing reps is a great way for advanced players to get high-intensity practice without burning out, allowing you to alternate sets and stay focused.</p>
-            </details>
-            <details class="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-900 uppercase text-sm tracking-widest">
-                    What should I bring?
-                    <span class="faq-arrow transition-transform">▼</span>
-                </summary>
-                <p class="mt-4 text-slate-600 text-md leading-relaxed">Just bring your glove. I provide professional-grade softballs and a variety of high-end bats for use during all sessions.</p>
-            </details>
-            <details class="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-900 uppercase text-sm tracking-widest">
-                    Where are the lessons held?
-                    <span class="faq-arrow transition-transform">▼</span>
-                </summary>
-                <p class="mt-4 text-slate-600 text-md leading-relaxed">We coordinate at local parks throughout Tampa, St. Pete, and Clearwater. Once you book, we'll confirm the best field based on your location.</p>
-            </details>
-        </div>
-    </section>
-
+    <!-- NEW CRM CONTACT FORM SECTION -->
     <section id="contact" class="bg-slate-900 py-24 px-6 text-white">
-        <div class="max-w-3xl mx-auto bg-white p-10 md:p-16 rounded-3xl shadow-2xl text-slate-900">
-            <h2 class="text-5xl jersey-font mb-10 text-center uppercase">Book Your Session</h2>
-            <form action="https://formspree.io/f/mdapoavd" method="POST" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <input name="name" type="text" placeholder="Name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-6 outline-none focus:border-lime-500">
-                    <input name="phone" type="tel" placeholder="Cell Phone" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-6 outline-none focus:border-lime-500">
-                </div>
-                <select id="service-dropdown" name="service" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-6 outline-none font-bold uppercase text-xs">
-                    <option value="Dugout Deal ($150)">Dugout Deal ($150)</option>
-                    <option value="1-Hour Lesson/BP ($60)">1-Hour Lesson/BP ($60)</option>
-                    <option value="2-Hour Lesson/BP ($100)">2-Hour Lesson/BP ($100)</option>
-                    <option value="Question">General Question</option>
-                </select>
-                <textarea name="message" rows="4" placeholder="How can I help your swing?" class="w-full bg-slate-50 border border-slate-200 rounded-xl py-4 px-6 outline-none focus:border-lime-500"></textarea>
-                <button type="submit" class="w-full bg-slate-900 text-lime-400 text-3xl jersey-font py-5 rounded-2xl hover:bg-lime-400 hover:text-slate-900 transition shadow-xl uppercase tracking-widest">
-                    Submit Request
-                </button>
-            </form>
+        <div class="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-3xl shadow-2xl">
+            <h2 class="text-5xl jersey-font mb-10 text-center uppercase text-slate-900">Contact Coach Danny</h2>
+            
+            <!-- GO HIGH LEVEL EMBED -->
+            <div class="rounded-xl overflow-hidden min-h-[600px]">
+                <iframe
+                    src="https://link.alwaysanswer247.com/widget/form/vFdk9IyYWxwBqg9HEJcq"
+                    style="width:100%;height:100%;border:none;border-radius:8px"
+                    id="inline-vFdk9IyYWxwBqg9HEJcq"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact"
+                    data-height="746"
+                    data-layout-iframe-id="inline-vFdk9IyYWxwBqg9HEJcq"
+                    data-form-id="vFdk9IyYWxwBqg9HEJcq"
+                    title="Contact">
+                </iframe>
+                <script src="https://link.alwaysanswer247.com/js/form_embed.js"></script>
+            </div>
         </div>
     </section>
 
@@ -200,11 +186,5 @@
         <p>© 2026 Danny's Dugout • Tampa Bay, FL</p>
     </footer>
 
-    <script>
-        function selectService(val) {
-            document.getElementById('service-dropdown').value = val;
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>
