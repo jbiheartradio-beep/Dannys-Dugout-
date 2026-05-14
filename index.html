@@ -35,22 +35,23 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="bg-white p-4 flex flex-wrap justify-between items-center shadow-md sticky top-0 z-50 border-b-4 border-lime-400">
-        <div class="flex items-center space-x-3">
-            <img src="logo.jpg" alt="Danny's Dugout Logo" class="h-10 w-auto rounded">
+    <nav class="bg-white p-3 md:p-4 flex justify-between items-center shadow-md sticky top-0 z-50 border-b-4 border-lime-400">
+        <div class="flex items-center space-x-2 md:space-x-3">
+            <img src="logo.jpg" alt="Danny's Dugout Logo" class="h-8 md:h-10 w-auto rounded">
             <div class="flex flex-col">
-                <span class="text-2xl jersey-font text-slate-900 leading-none">Danny's Dugout</span>
-                <span class="text-[10px] uppercase text-slate-500 font-bold tracking-widest -mt-1">Tampa • Clearwater • St. Pete</span>
+                <span class="text-xl md:text-2xl jersey-font text-slate-900 leading-none">Danny's Dugout</span>
+                <span class="text-[8px] md:text-[10px] uppercase text-slate-500 font-bold tracking-widest -mt-1">Tampa • Clearwater • St. Pete</span>
             </div>
         </div>
         
-        <div class="flex items-center space-x-4">
-            <div class="hidden md:block text-right">
-                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none">Book a Session</p>
-                <a href="tel:7274887476" class="text-xl font-bold text-slate-900">727-488-7476</a>
-            </div>
-            <a href="https://www.facebook.com/profile.php?id=100086622105243" target="_blank" class="text-[#1877F2]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        <div class="flex items-center space-x-3 md:space-x-4">
+            <!-- Updated Phone Link: Now visible on mobile as a button and desktop as text -->
+            <a href="tel:7274887476" class="flex flex-col items-end group">
+                <p class="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none group-hover:text-lime-500 transition">Call Coach Danny</p>
+                <span class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-lime-600 transition">727-488-7476</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100086622105243" target="_blank" class="text-[#1877F2] hidden xs:block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
             </a>
         </div>
     </nav>
@@ -85,7 +86,7 @@
             <div class="md:w-1/2 relative group">
                 <a href="https://baynews9.com/fl/tampa/news/2026/04/24/danny-lieber-hero" target="_blank" class="block h-full">
                     <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition"></div>
-                    <div class="w-full h-full min-h-[350px] bg-slate-200 flex items-center justify-center bg-[url('news-bg.jpg')] bg-cover bg-center">
+                    <div class="w-full h-full min-h-[350px] bg-slate-200 flex items-center justify-center bg-[url('news-bg.jpg')] bg-cover bg-center text-white">
                         <div class="bg-lime-400 text-slate-900 p-6 rounded-full shadow-2xl group-hover:scale-110 transition duration-300">
                             <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path d="M4.5 2.691l11.064 7.309-11.064 7.309v-14.618z" /></svg>
                         </div>
@@ -207,7 +208,7 @@
     <section id="contact" class="bg-slate-900 py-24 px-6 text-white">
         <div class="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-3xl shadow-2xl">
             <h2 class="text-5xl jersey-font mb-10 text-center uppercase text-slate-900">Contact Coach Danny</h2>
-            <div class="rounded-xl overflow-hidden min-h-[600px]">
+            <div class="rounded-xl overflow-hidden h-[750px]">
                 <iframe
                     src="https://link.alwaysanswer247.com/widget/form/vFdk9IyYWxwBqg9HEJcq"
                     style="width:100%;height:100%;border:none;border-radius:8px"
